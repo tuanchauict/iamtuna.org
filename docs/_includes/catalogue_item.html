@@ -1,0 +1,29 @@
+<a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+  <div class="catalogue-item-container">
+    <h1 class="catalogue-title">
+      {{ post.title }}
+      {% if include.sticky == 'true' %}
+        <span class="catalogue-pinned">
+          <svg class="tags-item-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-tag">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+          </svg>
+        </span>
+      {% endif %}
+    </h1>
+    <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+    
+    <p>
+      {% if post.excerpt_separator %}
+        {{ post.excerpt | strip_html }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords: 30 }}
+      {% endif %}
+      ...
+    </p>
+
+  </div>
+</a>
+<div class="catalogue-divider"></div>

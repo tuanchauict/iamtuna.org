@@ -1,0 +1,25 @@
+<nav class="nav">
+  <div class="nav-container">
+    <div class="nav-brand-container">
+      <div class="nav-brand">
+        <svg width="30" height="30" viewBox="0 0 416 416" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M371.178 330C285.351 129.407 75.7091 73.4407 20 202.358C115.541 345.472 302.32 195.482 397 125"
+            stroke="black" stroke-width="10" stroke-linecap="round" />
+          <circle cx="71" cy="185" r="12" fill="black" />
+        </svg>
+      </div>
+
+      <a href="{{ site.baseurl }}/">
+        <h2 class="nav-title">
+          {{ site.title }}
+        </h2>
+      </a>
+    </div>
+
+    <ul>
+      <li><a href="{{ site.baseurl }}/">notes</a></li>
+      <li><a href="{{ '/tags' | prepend: site.baseurl }}">tags</a></li>
+      <li><a href="{{ '/about' | prepend: site.baseurl }}">about</a></li>
+    </ul>
+  </div>
+</nav>

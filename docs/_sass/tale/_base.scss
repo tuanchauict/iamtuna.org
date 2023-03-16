@@ -1,0 +1,73 @@
+* {
+  @include box-sizing;
+  line-height: 1.6;
+}
+
+html,
+body {
+  color: $default-color;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $serif-primary;
+  overflow-y: scroll;
+  font-size: 17px;
+
+  @media (min-width: $pc-width) {
+    font-size: 19px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $default-shade;
+  font-family: $sans-serif;
+  line-height: normal;
+}
+
+a {
+  color: $default-color;
+  text-decoration: none;
+}
+
+blockquote {
+  margin: .8rem 0 0.8rem -1.1rem;
+  padding: 0.5rem 1rem 0.5rem 1.1rem;
+
+  ul, ol {
+    padding-left: 1.85rem;
+  }
+
+  & > *:first-child {
+    margin-top: 0!important;
+  }
+  & > *:last-child {
+    margin-bottom: 0!important;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  max-width: 100%;
+}
+
+td {
+  vertical-align: top;
+}
+
+hr {
+  border: 0.5px solid $grey-1;
+  margin: 3rem auto;
+  width: 7rem;
+}
