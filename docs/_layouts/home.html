@@ -13,7 +13,9 @@ layout: default
   {% endfor %}
 
   {% for post in paginator.posts %}
-    {% include catalogue_item.html %}
+    {% unless post.draft %}
+      {% include catalogue_item.html %}
+    {% endunless %}
   {% endfor %}
 </div>
 
