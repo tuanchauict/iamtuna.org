@@ -9,14 +9,26 @@
   }
 
   &-line {
-    border-top: 0.4rem solid $default-shade;
+    border-top: 1px solid $default-shade;
     display: block;
-    margin: 0 auto 3rem;
+    margin: 3rem auto;
     width: 4rem;
   }
 
   &-message {
-    max-width: 25rem;
+    max-width: 26rem;
     margin: 0 auto;
+  }
+
+  &-image-container {
+    padding-left: 50px;
+  }
+
+  & > hr {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }

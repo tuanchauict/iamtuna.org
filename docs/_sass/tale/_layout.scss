@@ -27,7 +27,7 @@ main {
   &-container {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     position: relative;
     text-align: center;
     padding: 0 2rem;
@@ -93,6 +93,7 @@ main {
 @media (min-width: 600px) {
   .nav {
     &-container {
+      margin: 1rem auto;
       flex-direction: row;
       justify-content: space-between;
     }
