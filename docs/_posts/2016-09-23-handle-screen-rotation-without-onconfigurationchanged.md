@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Handle screen rotation without onConfigurationChanged"
+title:  "Handle screen rotation without onConfiguration&shy;Changed"
 author: "Tuna"
 comments: false
 category: Android
