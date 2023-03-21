@@ -10,34 +10,40 @@ layout: default
     {% else %}
         {{ site.author.name }}
     {% endif %} -->
-
-    {% if page.date %}
-      <!-- <br> -->
-      <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
+    <span>
+      {% if page.category %}
+      {{ page.category }} •
+      {% endif %}
+    </span>
+    <time datetime="{{ page.date }}">{{ page.date | date: "%b %d, %Y" }}</time>
   </div>
 
   {{ content }}
 
-
   {% if page.tags %}
-    <div class="post-tags">
+  <div class="post-tags">
     {% for tag in page.tags %}
-      <a class="post-tag-item" href="/tags#{{ tag }}">{{ tag }}</a>
+    <a class="post-tag-item" href="/tags#{{ tag }}">{{ tag }}</a>
     {% endfor %}
-    </div>
+  </div>
   {% endif %}
 </article>
 
 {% if page.comments %}
-  {% include disqus_comments.html %}
+{% include disqus_comments.html %}
 {% endif %}
 
 <div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
+  <div class="pagination-container">
+    <span>
+      {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+      {% endif %}
+    </span>
+    <span>
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+      {% endif %}
+    </span>
+  </div>
 </div>

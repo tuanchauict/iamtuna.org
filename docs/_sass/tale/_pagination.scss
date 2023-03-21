@@ -1,9 +1,16 @@
 .pagination {
-  border-top: .5px solid $grey-2;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $color-main-divider;
   font-family: $serif-secondary;
-  padding-top: 2rem;
-  position: relative;
-  text-align: center;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: $standard-content-width;
+    width: 100%;
+    padding: 2rem $content-horizontalPadding 0;
+  }
 
   span {
     color: $default-shade;
@@ -11,9 +18,7 @@
   }
 
   .arrow {
-    // @include transition(all .3s ease-out);
     color: $default-color;
-    position: absolute;
 
     &:hover,
     &:focus {

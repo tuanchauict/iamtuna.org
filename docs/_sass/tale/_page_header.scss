@@ -1,0 +1,14 @@
+.page-header {
+  display: flex;
+  margin: 3rem 0 2rem;
+  justify-content: center;
+
+  &-title {
+    color: $default-shade;
+    font-family: $sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+  }
+}

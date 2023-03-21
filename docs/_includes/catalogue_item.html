@@ -13,8 +13,14 @@
         </span>
       {% endif %}
     </h1>
-    <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-    
+    <div class="catalogue-item-meta">
+      <span class="catalogue-item-category">
+        {% if post.category %}
+          {{ post.category }} •
+        {% endif %}
+      </span>
+      <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%b %d, %Y" }}</time>
+    </div>
     <p>
       {% if post.excerpt_separator %}
         {{ post.excerpt | strip_html }}

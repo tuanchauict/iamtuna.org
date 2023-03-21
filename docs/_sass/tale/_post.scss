@@ -1,5 +1,8 @@
 .post {
-  padding: 3rem 2rem;
+  padding: 3rem $content-horizontalPadding;
+  width: 100%;
+  max-width: $standard-content-width;
+  margin: 0 auto;
 
   &-title {
     color: $default-shade;

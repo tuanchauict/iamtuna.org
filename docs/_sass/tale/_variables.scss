@@ -1,3 +1,9 @@
+// Size
+$pc-width: 600px;
+$content-maxWidth: 700px;
+$content-horizontalPadding: 2rem;
+$standard-content-width: calc(#{$content-maxWidth} + #{$content-horizontalPadding} * 2);
+
 // Colors
 $default-color: #404040 !default;
 $default-shade: #353535 !default;
@@ -6,9 +12,10 @@ $grey-1: #979797 !default;
 $grey-2: #e5e5e5 !default;
 $grey-3: #f9f9f9 !default;
 $white: #fff !default;
-$blue: #057feb !default;
-$shadow-color: rgba(0, 0, 0, .2) !default;
-$code-color: #bf616a !default;
+
+$color-main-divider: #e5e5e5;
+$color-box-bg: #f9f9f9;
+$color-code-text: #b0303c !default;
 
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 // Fonts
@@ -22,11 +29,3 @@ $monospaced: Menlo, Monaco, monospace !default;
      -moz-box-sizing: $type;
           box-sizing: $type;
 }
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-     -moz-transition: $args;
-          transition: $args;
-}
-
-$pc-width: 600px
