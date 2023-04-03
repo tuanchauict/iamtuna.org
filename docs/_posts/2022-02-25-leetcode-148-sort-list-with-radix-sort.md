@@ -51,8 +51,24 @@ My solution for the follow up question is simpler: use [Radix sort](https://en.w
 
 Different from traditional radix sort on array, we don't need an extra memory for reordering the linked list. All we need is a similar array for counting.
 
-![Memory image](/images/2022-02-25/leetcode-148-radix-image.png "Memory image")
-_Memory image of nodes when running radix sort_
+```
+┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐
+│ 0 ││ 1 ││ 2 ││ 3 ││ 4 ││ 5 ││ 6 ││ 7 ││ 8 ││ 9 │
+└─▲─┘└───┘└─▲─┘└───┘└───┘└─▲─┘└───┘└───┘└───┘└─▲─┘
+  │         │              │                   │  
+┌─┴─┐     ┌─┴─┐          ┌─┴─┐               ┌─┴─┐
+│10 │     │52 │          │35 │               │ 9 │
+└─▲─┘     └─▲─┘          └─▲─┘               └───┘
+  │         │              │                      
+┌─┴─┐     ┌─┴─┐          ┌─┴─┐                    
+│20 │     │ 2 │          │ 5 │                    
+└─▲─┘     └───┘          └─▲─┘                    
+  │                        │                      
+┌─┴─┐                    ┌─┴─┐                    
+│40 │                    │25 │                    
+└───┘                    └───┘         
+               Memory image of nodes           
+```
 
 For simple, here I use `10^exp` base for the radix sort. We just need to run 5 times to cover all possible values from the test cases
 
