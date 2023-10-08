@@ -11,7 +11,7 @@ hidden: false
 draft: false
 ---
 
-Two years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time I created the scripts (before I wrote the note), we are still able to save file in the common space such as SDCard by using <!--more-->
+Three years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time I created the scripts (before I wrote the note), we are still able to save file in the common space such as SDCard by using <!--more-->
 ```
 adb shell run-as ...
 ``` 
@@ -72,4 +72,4 @@ dd if=file.gz | adb shell "run-as $package dd of=file.gz"
 
 This is also much faster than using `base64` when transferring data between the device and computer. Usually, it takes only around 1 second to do so.
 
-Finally, after 2 years of search, I could understand how Android Studio implemented *Save* and *Upload* features.
+Finally, after 3 years of search, I could understand how Android Studio implemented *Save* and *Upload* features.
