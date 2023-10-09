@@ -11,7 +11,7 @@ hidden: false
 draft: false
 ---
 
-Three years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time when I created the scripts (before writing the note), we were still able to save files in the common spaces such as SDCard by using 
+Three years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time when I created the scripts (before writing the note), we were still able to save files in the common spaces such as SDCard by using <!--more-->
 ```bash
 adb shell "run-as ..."
 ``` 
