@@ -218,7 +218,7 @@ The answer is sighly maybe, but not in the way you thought.
 
 Depending on the architecture, the answer lies under the assembly code of `<=` and `>` (or not).
 
-In x86 assembly, there is no difference between `<=` and `>`, both need only 1 jump instruction (the same for the riding ARM arch). 
+In x86 assembly, there is no difference between `<=` and `>`, both need only 1 jump instruction (the same for ARM arch). 
 
 ***x86 Assembly `>`***
 ```asm
