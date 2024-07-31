@@ -251,7 +251,7 @@ As we can see, doing `<=` requires 2 commands in comparision to only 1 command w
 Again, the result of #7 is just luck, the explanation above is just for fun or for someone who's curious how the code works under the hood.
 
 
-### Conclusion
+## Conclusion
 To beat 100%, all we need to do is click the Submit button several time and wish LeetCode will execute our code in the low traffic time. 
 
 Happy LeetCoding!
