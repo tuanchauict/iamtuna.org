@@ -221,12 +221,12 @@ Depending on the architecture, the answer lies under the assembly code of `<=` a
 In x86 assembly, there is no difference between `<=` and `>`, both need only 1 jump instruction (the same for ARM arch). 
 
 ***x86 Assembly `>`***
-```asm
+```
 cmp eax, ebx   ; Compare eax with ebx
 jg greater     ; Jump to 'greater' if eax > ebx
 ```
 ***x86 Assembly `<=`***
-```asm
+```
 cmp eax, ebx   ; Compare eax with ebx
 jle less_equal ; Jump to 'less_equal' if eax <= ebx
 ```
@@ -234,13 +234,13 @@ jle less_equal ; Jump to 'less_equal' if eax <= ebx
 However, with MIPS Assembly (which was used for the Computer Architecture subject in my University), it's bit different
 
 ***MIPS Assembly `>`***
-```asm
+```
 slt $t2, $t1, $t0  # $t2 = ($t1 < $t0) ? 1 : 0
 bne $t2, $zero, greater  # if $t2 != 0, branch to 'greater'
 ```
 
 ***MIPS Assembly `<=`***
-```asm
+```
 slt $t2, $t0, $t1  # $t2 = ($t0 < $t1) ? 1 : 0
 beq $t2, $zero, equal_or_greater  # if $t2 == 0, branch to 'equal_or_greater'
 ble $t0, $t1, less_equal  # if $t0 <= $t1, branch to 'less_equal'
@@ -248,7 +248,7 @@ ble $t0, $t1, less_equal  # if $t0 <= $t1, branch to 'less_equal'
 
 As we can see, doing `<=` requires 2 commands in comparision to only 1 command when we do `>`. So, somehow, just by removing `=` from the comparision, we could improve the runtime by less than a nanosecond in MIPS.
 
-Again, the result of #7 is just luck, the explanation above is just for fun or for someone who's curious how the code works under the hood.
+Again, the result of #7 is just luck, the explanation above is just for fun or for someone whose curious mind on how the code works under the hood.
 
 
 ## Conclusion
