@@ -252,6 +252,6 @@ Again, the result of #7 is just luck, the explanation above is just for fun or f
 
 
 ## Conclusion
-To beat 100%, all we need to do is click the Submit button several time and wish LeetCode will execute our code in the low traffic time. 
+To beat 100%, all we need to do is click the Submit button several times and wish LeetCode will execute our code in the low traffic time. 
 
 Happy LeetCoding!
