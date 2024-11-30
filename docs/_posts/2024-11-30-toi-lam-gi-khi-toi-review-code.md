@@ -8,7 +8,7 @@ tags: review vietnamese mentoring
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
-draft: true
+draft: false
 ---
 
 Bên cạnh coding, *review code* và *mentoring* là hai trong số những công việc mình thực hiện hằng ngày. Thông thường, trừ khi phải tập trung code cho một feature mới hay fix bug, *review code* là công việc chiếm nhiều thời gian nhất. <!--more--> Nhân đây, cũng muốn flex một chút là mình là thành viên của **Code Review Committee** – một committee định ra các quy chuẩn, coding style, và đôi khi là system design cho **LINE Chat client app**.
