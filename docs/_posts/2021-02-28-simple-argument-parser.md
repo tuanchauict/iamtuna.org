@@ -13,7 +13,7 @@ hidden: false
 draft: false
 ---
 
-I’m a guy who usually writes a lot of script files to automate my daily routine. To extend the flexibility of the script, a good piece of advice is to make the script accepts parameters passing from command<!--more-->.
+I’m a guy who usually writes a lot of script files to automate my daily routine. To extend the flexibility of the script, a good piece of advice is to make the script accepts parameters passing from command.
 
 There are tons of argument parser libraries out there, for every programming language we can imagine. It’s because the command-line application is mostly the 1st class resident of a programming language. I haven’t checked all of the libraries or dug deeply into a specific library (yes, I’m a lazy guy, too). I sometimes intended to apply some of the libraries for this purpose for my Python scripts (for example [argparse](https://docs.python.org/3/library/argparse.html)). However, I feel they are too complex for a lazy guy like me, and all of the time, I give up adopting a library and use raw argument array received from the environment instead (ie. `sys.argv` in Python).
 

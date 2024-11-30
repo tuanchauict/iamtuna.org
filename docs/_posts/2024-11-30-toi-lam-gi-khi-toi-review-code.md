@@ -29,6 +29,7 @@ Một ví dụ khác: Khi tác giả đang làm việc theo từng bước nhỏ
 
 Hiểu được điều này, mình sẽ coi những lỗi này như những “tai nạn” khi code và nhắc nhở nhẹ nhàng kiểu: 
 
+{: .box-italic}
 > “*I guess you forgot pressing Command + Shift + L to format the code*”
 
 Nguyên nhân chính thường là do tác giả phải chuyển đổi ngữ cảnh (context switch) nhiều, dẫn đến quên xử lý một vài đoạn code nhỏ.
@@ -37,10 +38,12 @@ Nguyên nhân chính thường là do tác giả phải chuyển đổi ngữ c�
 
 Dù review code là quá trình giao tiếp giữa reviewer và tác giả, mục tiêu chính của việc review là **code**, không phải **người viết code**.
 
+{: .box-italic}
 > “This code looks not correct”  
 
 thay vì
 
+{: .box-italic}
 > “You wrote this code incorrectly” 
 
 Thay vì dùng “you,” mình thường dùng “we” để trao đổi với tác giả, chẳng hạn: *“I think we should change this to …”*
@@ -67,12 +70,12 @@ Hoặc vừa mới hôm qua, mình viết thế này:
 
 Loại code này gây khó khăn rất lớn cho quá trình maintain sau này.
 
-Cả tác giả và reviewer thường có **bias** rằng code hiện tại “có thể hiểu được” tại thời điểm review, vì họ còn nhớ rõ context. Nhưng chỉ sau khoảng một năm, gần như không ai nhớ context đó nữa.
+Cả tác giả và reviewer thường có bias rằng code hiện tại *“có thể hiểu được”* tại thời điểm review, vì họ còn nhớ rõ context. Nhưng chỉ sau khoảng một năm, gần như không ai nhớ context đó nữa.
 
 **Cách hạn chế bias**
 Khi code hoặc review code, luôn tự hỏi: *“năm sau nếu đọc lại thì mình có hiểu được đoạn này có nghĩa là gì không?”* để hạn chế việc thêm và cho phép ambiguous code xảy ra. Nếu được, có thể nhờ một người ngoài team review thử.
 
-Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thường, mình đóng vai một **dummy**, tự đặt mình vào vị trí của người không biết gì về feature, dù đó là code do team mình maintain hay dựa trên phần mình từng viết. Mentor của mình thường tự nhắc đi nhắc lại: _“I’m not good enough to understand this.”_
+Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thông thường, mình đóng vai một **dummy**, tự đặt mình vào vị trí của người không biết gì về feature, dù đó là code do team mình maintain hay dựa trên phần mình từng viết. Mentor của mình thường tự nhắc đi nhắc lại: _“I’m not good enough to understand this.”_
 
 **Cách giảm ambiguous**
 

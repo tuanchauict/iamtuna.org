@@ -5,6 +5,8 @@ author: "Tuna"
 comments: false
 category: Scripting
 tags: git lazy python bash
+custom_excerpt: |
+  Sharing experiences and challenges of naming git branches as a developer who prefers using UI tools over the console. Discussing the transition from long, descriptive branch names to more manageable ones...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
@@ -13,7 +15,7 @@ draft: false
 
 ![git branch](/images/2018-11-02/git-cover.webp "git branch")
 
-Well, I’m a developer. Using **git** is somehow my daily job. I’m not very keen on typing command on the console, especially with long commands. In my previous company, we didn’t create a branch for each feature, just `dev` or `master` branch for all (of course, `release-xxx` branch for releasing)<!--more-->. After joining the current company and feature branches are mandatory, I start seeing my bad on this. First, I use UI for switching between branches. My tools go from Android Studio (which I mainly use for Android dev) to SourceTree (which I have known for a long time) and to Fork (a new UI git tool). I’m happy with Fork.
+Well, I’m a developer. Using **git** is somehow my daily job. I’m not very keen on typing command on the console, especially with long commands. In my previous company, we didn’t create a branch for each feature, just `dev` or `master` branch for all (of course, `release-xxx` branch for releasing). After joining the current company and feature branches are mandatory, I start seeing my bad on this. First, I use UI for switching between branches. My tools go from Android Studio (which I mainly use for Android dev) to SourceTree (which I have known for a long time) and to Fork (a new UI git tool). I’m happy with Fork.
 
 With the support from UI tools, I usually created very long branch name like
 

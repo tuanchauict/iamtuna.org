@@ -5,6 +5,8 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode dynamic-programming python monotonic-stack
+custom_excerpt: |
+  Discussing a dynamic programming approach to solve LeetCode problem #321: Create Maximum Number. The problem involves creating the maximum number of length k from two arrays while preserving the relative order of digits...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
@@ -12,7 +14,7 @@ draft: false
 ---
 
 {: .box-italic}
->You are given two integer arrays `nums1` and `nums2` of lengths `m` and `n` respectively. `nums1` and `nums2` represent the digits of two numbers. You are also given an integer `k`<!--more-->.
+>You are given two integer arrays `nums1` and `nums2` of lengths `m` and `n` respectively. `nums1` and `nums2` represent the digits of two numbers. You are also given an integer `k`.
 > 
 > Create the maximum number of length `k <= m + n` from digits of the two numbers. The relative order of the digits from the same array must be preserved.
 > 
