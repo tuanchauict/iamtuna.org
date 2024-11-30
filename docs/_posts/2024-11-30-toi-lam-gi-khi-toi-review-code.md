@@ -13,7 +13,7 @@ hidden: false
 draft: false
 ---
 
-Bên cạnh coding, *review code* và *mentoring* là hai trong số những công việc mình thực hiện hằng ngày. Thông thường, trừ khi phải tập trung code cho một feature mới hay fix bug, *review code* là công việc chiếm nhiều thời gian nhất. Nhân đây, cũng muốn flex một chút là mình là thành viên của **Code Review Committee** – một committee định ra các quy chuẩn, coding style, và đôi khi là system design cho **LINE Chat client app**.
+Bên cạnh coding, *review code* và *mentoring* là hai trong số những công việc mình thực hiện hằng ngày. Thông thường, trừ khi phải tập trung code cho một feature mới hay fix bug, *review code* là công việc chiếm nhiều thời gian nhất.
 
 Sau đây, mình xin chia sẻ một số việc mình thường làm khi review một [**Pull Request** (PR)][1].
 
