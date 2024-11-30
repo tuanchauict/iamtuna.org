@@ -69,23 +69,20 @@ Loại code này gây khó khăn rất lớn cho quá trình maintain sau này.
 
 Cả tác giả và reviewer thường có **bias** rằng code hiện tại “có thể hiểu được” tại thời điểm review, vì họ còn nhớ rõ context. Nhưng chỉ sau khoảng một năm, gần như không ai nhớ context đó nữa.
 
-**Cách giải quyết**: Khi viết hoặc review code, luôn tự hỏi:
-_“Một năm sau, liệu mình có hiểu đoạn code này không?”_
+**Cách hạn chế bias**
+Khi code hoặc review code, luôn tự hỏi: *“năm sau nếu đọc lại thì mình có hiểu được đoạn này có nghĩa là gì không?”* để hạn chế việc thêm và cho phép ambiguous code xảy ra. Nếu được, có thể nhờ một người ngoài team review thử.
 
-Khi code hoặc review code, luôn tự hỏi: *“năm sau nếu đọc lại thì mình có hiểu được đoạn này có nghĩa là gì không?”* để hạn chế việc code thêm và cho phép ambiguous code xảy ra. Nếu được, có thể nhờ một người ngoài team review thử.
+Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thường, mình đóng vai một **dummy**, tự đặt mình vào vị trí của người không biết gì về feature, dù đó là code do team mình maintain hay dựa trên phần mình từng viết. Mentor của mình thường tự nhắc đi nhắc lại: _“I’m not good enough to understand this.”_
 
-Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thường, mình đóng vai một **dummy**, tự đặt mình vào vị trí của người không biết gì về feature, dù đó là code của đồng đội hay dựa trên phần mình từng viết.
+**Cách giảm ambiguous**
 
-Nếu context của đoạn code vượt ra khỏi khả năng giải thích của tên hàm, tên biến, hoặc cấu trúc code, **hãy viết comment giải thích trực tiếp trong code**. Những phần như commit log hay PR description tuy hữu ích nhưng không đủ, vì chúng không dễ truy cập khi cần đọc và hiểu đoạn code sau này.
-
-Gợi ý này chắc chắn sẽ không làm hài lòng những ai theo đuổi triết lý _Clean Code_, vì một trong những nguyên tắc của sách này là “Code tự nói lên ý nghĩa của nó.” Tuy nhiên, một phản biện quan trọng là:
+Nếu context của đoạn code vượt ra khỏi khả năng giải thích của tên hàm, tên biến, hoặc cấu trúc code, **hãy viết comment giải thích trực tiếp trong code**. Những phần như commit log hay PR description tuy hữu ích nhưng không đủ, vì chúng không dễ truy cập khi cần đọc và hiểu đoạn code sau này. Gợi ý này chắc chắn sẽ không làm hài lòng những ai theo đuổi triết lý _Clean Code_, vì một trong những nguyên tắc của sách này là “Code tự nói lên ý nghĩa của nó.” Tuy nhiên, một phản biện quan trọng là:
 
 > Nếu comment không được maintain, hãy đảm bảo cả code và comment đều được review và cập nhật đồng thời.
 
-Bên cạnh đó, mình cũng muốn nhấn mạnh rằng việc nhận biết một đoạn code có rõ ràng hay không là một kỹ năng khó, đặc biệt với các bạn junior. Nó khó bởi vì khi đọc code, bạn cần **hạ thấp độ tự tin** để nhận ra vấn đề, nhưng khi viết code, bạn lại cần **tăng độ tự tin** để giải quyết vấn đề. Mentor của mình thường nhắc đi nhắc lại:
-_“I’m not good enough to understand this.”_
+Bên cạnh đó, mình cũng muốn nhấn mạnh rằng việc nhận biết một đoạn code có rõ ràng hay không là một kỹ năng khó. Nó khó bởi vì khi đọc code, bạn cần **hạ thấp độ tự tin** để nhận ra vấn đề, nhưng khi viết code, bạn lại cần **tăng độ tự tin** để giải quyết vấn đề.
 
-Đối với các bạn junior, thử thách còn lớn hơn vì các bạn vừa phải nỗ lực diễn giải đoạn code để hiểu rõ vấn đề, vừa phải chống lại xu hướng tự diễn giải để nhận biết **bad code**. Đây là một sự cân bằng không dễ đạt được nhưng rất cần thiết để trở thành một reviewer giỏi.
+Đối với các bạn junior, thử thách còn lớn hơn vì các bạn vừa phải nỗ lực diễn giải đoạn code để hiểu rõ vấn đề, học thư viện mới,... vừa phải chống lại xu hướng tự diễn giải để nhận biết **bad code**. Đây là một sự cân bằng không dễ đạt được nhưng rất cần thiết để trở thành một reviewer giỏi.
 
 ## 4. Thoả hiệp
 
@@ -93,13 +90,13 @@ Dù nói không với ambiguous code, không phải lúc nào cũng có thể t�
 
 **Thoả hiệp như thế nào?**
 
-Quy tắc của mình là: nếu author nhận thức đúng về hạn chế của đoạn code, mình sẽ đồng ý cho merge, với điều kiện có ghi chú rõ ràng (*TODO* hoặc comment). Ngược lại, mình sẽ yêu cầu author chứng minh, test, thử nghiệm, hoặc phân tích đủ kiểu để đảm bảo họ hiểu rõ limitation, side effects, và actual usage. Với những case phức tạp như state machine hay concurrency, đôi khi mình sẽ tự làm thử nghiệm để minh chứng cho tác giả.
+Quy tắc của mình là: nếu author nhận thức đúng về hạn chế của đoạn code, mình sẽ đồng ý cho merge, với điều kiện có ghi chú rõ ràng (*TODO* hoặc comment). Ngược lại, mình sẽ yêu cầu author chứng minh, test, thử nghiệm, hoặc phân tích các kiểu để đảm bảo họ hiểu rõ limitation, side effects, và actual usage của đoạn code. Với những case phức tạp như state machine hay concurrency, đôi khi mình sẽ tự làm thử nghiệm để minh chứng cho tác giả.
 
 **Khi tác giả không chịu thì sao?**
 
 Mình sẽ nhẹ nhàng sử dụng *Request change*. Đây là công cụ mình rất ít khi dùng, vì nó dễ tạo cảm giác không thoải mái cho cả hai bên. Tuy nhiên, nó cần thiết để ngăn bad code bị merge vào project.
 
-Một vấn đề mình thường gặp là nhiều thành viên của team mình ở Việt Nam hay dùng là chứng minh code bằng thực nghiệm thay vì dựa trên lý thuyết hoặc phân tích logic, kiểu *“chạy thấy ổn, không có lỗi gì.”* Một số trường hợp thì cách chứng mình này có thể chấp nhận được, nhưng tốt hơn là sử dụng **theory**, **diagram**, hoặc **data flow analysis** để giải thích, nhất là với các vấn đề liên quan đến concurrency.
+Một vấn đề mình thường gặp là nhiều thành viên của team mình hay dùng là chứng minh code bằng thực nghiệm thay vì dựa trên lý thuyết hoặc phân tích logic, kiểu *“chạy thấy ổn, không có lỗi gì.”* Một số trường hợp thì cách chứng mình này có thể chấp nhận được, nhưng tốt hơn là sử dụng **theory**, **diagram**, hoặc **data flow analysis** để giải thích, nhất là với các vấn đề liên quan đến concurrency.
 
 ## Lời kết
 
