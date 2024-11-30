@@ -15,10 +15,8 @@ Bên cạnh coding, *review code* và *mentoring* là hai trong số những cô
 
 Sau đây, mình xin chia sẻ một số việc mình thường làm khi review một [**Pull Request** (PR)][1].
 
-> **Disclaimer**: Mình là một **strict code reviewer**. Trong team mình, việc một PR đã được 2-3 reviewer approved nhưng sau đó vẫn bị mình yêu cầu “Request change” hoặc có hàng chục comment là chuyện hết sức bình thường.
-
 ## 1.  Đặt mình vào hoàn cảnh của tác giả
-Việc này giúp mình “be human” hơn khi viết comment, đồng thời hiểu tại sao tác giả lại code như vậy hoặc mắc lỗi như vậy.
+Việc này giúp mình *“be human”* hơn khi viết comment, đồng thời hiểu tại sao tác giả lại code hoặc mắc lỗi như vậy.
 
 Ví dụ gần đây, một đồng nghiệp của mình vừa mới có em bé. Bạn ấy phải dành nhiều thời gian và tâm trí chăm sóc gia đình, nên khó có thể hoàn toàn tập trung khi code. Hiểu được điều này, mình sẽ không quá khắt khe khi bạn ấy lặp lại một vài lỗi nhỏ, hoặc mình sẽ giải thích kỹ hơn, thậm chí viết sẵn mẫu code để bạn ấy có thể copy-paste dễ dàng.
 
@@ -45,7 +43,7 @@ thay vì
 
 Thay vì dùng “you,” mình thường dùng “we” để trao đổi với tác giả, chẳng hạn: *“I think we should change this to …”*
 
-Ngoài ra, để làm nhẹ không khí, mình thường thêm các cụm từ như _“I think, I guess, I feel, IMO…”_ vào comment. Điều này giúp tránh cảm giác “bị tấn công” đối với tác giả. Không ai thích bị soi mói khi đã dành rất nhiều thời gian viết code, test, debug… Việc dùng “we” tạo cảm giác cả reviewer và tác giả cùng đứng trên một chiến tuyến (mà thực tế đúng là như vậy). Reviewer sau này cũng phải maintain và làm việc với code của tác giả, nên tất cả đều hướng tới mục tiêu cải thiện chất lượng code sau mỗi lần merge.
+Ngoài ra, để làm nhẹ không khí, mình thường thêm các cụm từ như _“I think, I guess, I feel, IMO…”_ vào comment. Điều này giúp tránh cảm giác *“bị tấn công”* đối với tác giả. Không ai thích bị soi mói sau khi đã dành rất nhiều thời gian viết code, test, debug… Việc dùng “we” tạo cảm giác cả reviewer và tác giả cùng đứng trên một chiến tuyến (mà thực tế đúng là như vậy). Reviewer sau này cũng phải maintain và làm việc với code của tác giả, nên tất cả đều hướng tới mục tiêu cải thiện chất lượng code sau mỗi lần merge.
 
 Tuy nhiên, không phải lúc nào cũng cần tránh hoàn toàn “you”. Có những trường hợp mình vẫn dùng “you”, chẳng hạn:
 - _“Could you help me double-check this for memory leaks?”_
@@ -76,13 +74,11 @@ Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó kh
 
 **Cách giảm ambiguous**
 
-Nếu context của đoạn code vượt ra khỏi khả năng giải thích của tên hàm, tên biến, hoặc cấu trúc code, **hãy viết comment giải thích trực tiếp trong code**. Những phần như commit log hay PR description tuy hữu ích nhưng không đủ, vì chúng không dễ truy cập khi cần đọc và hiểu đoạn code sau này. Gợi ý này chắc chắn sẽ không làm hài lòng những ai theo đuổi triết lý _Clean Code_, vì một trong những nguyên tắc của sách này là “Code tự nói lên ý nghĩa của nó.” Tuy nhiên, một phản biện quan trọng là:
-
-> Nếu comment không được maintain, hãy đảm bảo cả code và comment đều được review và cập nhật đồng thời.
+Nếu context của đoạn code vượt ra khỏi khả năng giải thích của tên hàm, tên biến, hoặc cấu trúc code, **hãy viết comment giải thích trực tiếp trong code**. Những phần như commit log hay PR description tuy hữu ích nhưng không đủ, vì chúng không dễ truy cập khi cần đọc và hiểu đoạn code sau này. Gợi ý này chắc chắn sẽ không làm hài lòng những ai theo đuổi triết lý _Clean Code_, vì một trong những nguyên tắc của sách này là *“Code tự nói lên ý nghĩa của nó.”* . Một phản biện là "Comment thường không được maintain". Để giải quyết luận điểm này, hãy maintain cả comment lúc code và lúc review code.
 
 Bên cạnh đó, mình cũng muốn nhấn mạnh rằng việc nhận biết một đoạn code có rõ ràng hay không là một kỹ năng khó. Nó khó bởi vì khi đọc code, bạn cần **hạ thấp độ tự tin** để nhận ra vấn đề, nhưng khi viết code, bạn lại cần **tăng độ tự tin** để giải quyết vấn đề.
 
-Đối với các bạn junior, thử thách còn lớn hơn vì các bạn vừa phải nỗ lực diễn giải đoạn code để hiểu rõ vấn đề, học thư viện mới,... vừa phải chống lại xu hướng tự diễn giải để nhận biết **bad code**. Đây là một sự cân bằng không dễ đạt được nhưng rất cần thiết để trở thành một reviewer giỏi.
+Đối với các bạn junior, thử thách còn lớn hơn vì các bạn vừa phải nỗ lực diễn giải đoạn code để hiểu rõ vấn đề, học cái mới,... vừa phải chống lại xu hướng tự diễn giải để nhận biết **bad code**. Đây là một sự cân bằng không dễ đạt được nhưng rất cần thiết để trở thành một reviewer giỏi.
 
 ## 4. Thoả hiệp
 
