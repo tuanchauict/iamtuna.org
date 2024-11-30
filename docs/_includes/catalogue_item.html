@@ -22,10 +22,14 @@
       <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%b %d, %Y" }}</time>
     </div>
     <p>
-      {% if post.excerpt_separator %}
-        {{ post.excerpt | strip_html }}
+      {% if post.custom_excerpt %}
+        {{ post.custom_excerpt | strip_html }}
       {% else %}
-        {{ post.content | strip_html | truncatewords: 30 }}
+        {% if post.excerpt_separator %}
+          {{ post.excerpt | strip_html }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 30 }}
+        {% endif %}
       {% endif %}
       ...
     </p>
