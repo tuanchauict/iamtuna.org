@@ -5,13 +5,15 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android adb debugging bash
+custom_excerpt: |
+  Revisiting the use of ADB to backup and restore test data, addressing changes since Android 10 that restrict file saving to app directories. Also exploring how Android Studio's Device Explorer manages to save and upload files despite these restrictions...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
 draft: false
 ---
 
-Three years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time when I created the scripts (before writing the note), we were still able to save files in the common spaces such as SDCard by using <!--more-->
+Three years ago, I wrote [a note about how to use `adb` to backup the test data](https://iamtuna.org/2020-11-07/use-adb-backup-and-restore-local-data-for-testing). At that time, or at the time when I created the scripts (before writing the note), we were still able to save files in the common spaces such as SDCard by using
 ```bash
 adb shell "run-as ..."
 ``` 

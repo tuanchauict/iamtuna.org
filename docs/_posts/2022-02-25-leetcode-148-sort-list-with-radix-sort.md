@@ -5,6 +5,8 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode python radix-sort
+custom_excerpt: |
+  Exploring the implementation of Radix Sort to solve Leetcode problem #148: Sort List. The approach involves using a base of 10^exp and running the sort 5 times to cover all possible values, with detailed steps and code provided...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
@@ -13,7 +15,7 @@ draft: false
 
 The question is simple: 
 
-> Given the `head` of a linked list, return the list after sorting it in **ascending order**<!--more-->.
+> Given the `head` of a linked list, return the list after sorting it in **ascending order**.
 > <br> *([Leetcode 148](https://leetcode.com/problems/sort-list/))*
 
 

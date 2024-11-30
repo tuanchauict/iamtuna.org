@@ -5,6 +5,8 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android adb debugging
+custom_excerpt: |
+  Introducing a short trick to backup and restore local data for testing Android apps using ADB. This method is useful for managing test data, especially when dealing with different app versions or complex data setups...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
@@ -13,7 +15,7 @@ draft: false
 
 In addition to [making ADB more useful in testing and debugging Android apps](/2020-10-25/extend-adb-to-make-app-debugging-easier), today I would like to introduce a short trick to backup and restore the local data for testing.
 
-Test data on debugging built app is as important as the real data on users’ devices. Have you ever had to clean the app data to be able to start the app for debugging? Or have you ever worked in parallel for debug and release versions and they have different versions of Database? If the answer is YES (I’m sure most of us do), it hurts, especially when the data is related to date or time (UI is different for items created last month and today); or it’s hard and takes time to create test data (like creating new accounts)<!--more-->.
+Test data on debugging built app is as important as the real data on users’ devices. Have you ever had to clean the app data to be able to start the app for debugging? Or have you ever worked in parallel for debug and release versions and they have different versions of Database? If the answer is YES (I’m sure most of us do), it hurts, especially when the data is related to date or time (UI is different for items created last month and today); or it’s hard and takes time to create test data (like creating new accounts).
 
 ## Let’s backup
 ```bash

@@ -5,13 +5,15 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android debugging adb
+custom_excerpt: |
+  Exploring how to extend ADB to make app debugging easier. This involves using ADB for more than just basic commands, and integrating it with tools like dev menus, Facebook's Flipper, Stetho, or Hyperion to enhance the debugging experience...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
 draft: false
 ---
 
-ADB is a useful and powerful tool to interact with an Android app or the whole Android device via the command line. However, ADB is still far away from a debug tool, therefore, usually, in a big app, we have to develop a UI tool called dev menu or something like that to interact, change the configuration, etc. We may use the other library like Facebook’s [Fillper](https://fbflipper.com/) or [Stetho](http://facebook.github.io/stetho/) or [Hyperion](https://github.com/willowtreeapps/Hyperion-Android), etc<!--more-->.
+ADB is a useful and powerful tool to interact with an Android app or the whole Android device via the command line. However, ADB is still far away from a debug tool, therefore, usually, in a big app, we have to develop a UI tool called dev menu or something like that to interact, change the configuration, etc. We may use the other library like Facebook’s [Fillper](https://fbflipper.com/) or [Stetho](http://facebook.github.io/stetho/) or [Hyperion](https://github.com/willowtreeapps/Hyperion-Android), etc.
 
 In this writing, I would like to extend ADB to make development life easier.
 
