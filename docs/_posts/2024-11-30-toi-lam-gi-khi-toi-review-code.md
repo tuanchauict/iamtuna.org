@@ -34,7 +34,7 @@ Hiểu được điều này, mình sẽ coi những lỗi này như những “
 
 Nguyên nhân chính thường là do tác giả phải chuyển đổi ngữ cảnh (context switch) nhiều, dẫn đến quên xử lý một vài đoạn code nhỏ.
 
-## 2. Tránh dùng "you"
+## 2. Tránh dùng "you" 🫵
 
 Dù review code là quá trình giao tiếp giữa reviewer và tác giả, mục tiêu chính của việc review là **code**, không phải **người viết code**.
 
@@ -106,5 +106,11 @@ Review code không chỉ là một bước kiểm tra chất lượng mà còn l
 Mình tin rằng một quy trình review tốt không chỉ cải thiện chất lượng sản phẩm mà còn giúp mọi người trong team phát triển, từ junior đến senior. Hy vọng bài viết này sẽ mang lại góc nhìn hữu ích cho bạn trong hành trình trở thành một code reviewer hiệu quả và có trách nhiệm.
 
 Cảm ơn bạn đã đọc!
+
+## Đọc thêm
+- [How to Do Code Reviews Like a Human](https://mtlynch.io/human-code-reviews-1/)
+- [The Art of Readable Code](https://www.oreilly.com/library/view/the-art-of/9781449318482/)
+- [Good Code, Bad Code](https://www.manning.com/books/good-code-bad-code)
+- [A Philosophy of Software Design](https://books.google.co.jp/books/about/A_Philosophy_of_Software_Design.html?id=hkfEzgEACAAJ&source=kp_book_description&redir_esc=y)
 
 [1]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
