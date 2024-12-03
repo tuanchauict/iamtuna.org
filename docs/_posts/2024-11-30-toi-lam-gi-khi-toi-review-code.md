@@ -69,20 +69,21 @@ Hoặc vừa mới hôm qua, mình viết thế này:
 
 ## 3. Không thoả hiệp với ambiguous code
 
-**Ambiguous code** xảy ra khi (bao gồm nhưng không phải tất cả nguyên nhân):
+**Ambiguous code** xảy ra khi:
 - Tên biến/hàm không rõ nghĩa hoặc không đúng ngữ cảnh;
 - Có thứ tự ngầm định giữa các dòng code;
 - Các thuật ngữ chưa được định nghĩa rõ ràng;
-- v.v...
+- và còn nhiều nguyên nhân khác...
 
 Loại code này gây khó khăn rất lớn cho quá trình maintain sau này.
 
 Cả tác giả và reviewer thường có bias rằng code hiện tại *“có thể hiểu được”* tại thời điểm review, vì họ còn nhớ rõ context. Nhưng chỉ sau khoảng một năm, gần như không ai nhớ context đó nữa.
 
 **Cách hạn chế bias**
+
 Khi code hoặc review code, luôn tự hỏi: *“năm sau nếu đọc lại thì mình có hiểu được đoạn này có nghĩa là gì không?”* để hạn chế việc thêm và cho phép ambiguous code xảy ra. Nếu được, có thể nhờ một người ngoài team review thử.
 
-Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thông thường, mình đóng vai một **dummy**, tự đặt mình vào vị trí của người không biết gì về feature, dù đó là code do team mình maintain hay dựa trên phần mình từng viết. Mentor của mình thường tự nhắc đi nhắc lại: _“I’m not good enough to understand this.”_
+Khi review, mình tránh việc diễn giải đoạn code theo cách mà nó không thể hiện hoặc không làm rõ. Thông thường, mình đóng vai một *dummy*, tự đặt mình vào vị trí của người không biết gì về feature đó, dù là code đó do team mình maintain hay dựa trên phần mình từng viết. Mentor của mình thường tự nhắc đi nhắc lại: _“I’m not good enough to understand this.”_
 
 **Cách giảm ambiguous**
 
