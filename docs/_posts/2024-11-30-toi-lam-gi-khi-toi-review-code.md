@@ -6,7 +6,7 @@ comments: false
 category: Coding
 tags: review vietnamese mentoring
 custom_excerpt: |
-  Code review không chỉ là kiểm tra chất lượng, mà còn là cơ hội để nâng cao kỹ năng và xây dựng sự đồng cảm trong team. Bài viết chia sẻ những nguyên tắc mình áp dụng khi review, từ cách giữ thái độ khách quan, tránh dùng “you”, đến việc thoả hiệp với tech debt. Hy vọng những kinh nghiệm này sẽ giúp bạn trở thành một reviewer hiệu quả, góp phần cải thiện cả chất lượng code và team...
+  Code review không chỉ là kiểm tra chất lượng, mà còn là cơ hội để nâng cao kỹ năng và xây dựng sự đồng cảm trong team. Bài viết chia sẻ những nguyên tắc mình áp dụng khi review, từ cách giữ thái độ khách quan, tránh dùng “you”, đến việc thoả hiệp với tech debt. Hy vọng những kinh nghiệm này sẽ giúp bạn trở thành một reviewer hiệu quả, góp phần cải thiện cả chất lượng code và cả team...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
@@ -114,7 +114,7 @@ Một vấn đề mình thường gặp là nhiều thành viên của team mìn
 
 Review code không chỉ là một bước kiểm tra chất lượng mà còn là cơ hội để học hỏi, cải thiện kỹ năng, và xây dựng sự đồng cảm giữa các thành viên trong team. Là một reviewer, mình luôn cố gắng đặt mục tiêu chung lên hàng đầu: tạo ra code không chỉ đúng mà còn rõ ràng, dễ hiểu, và dễ maintain. Điều này đòi hỏi sự nghiêm khắc nhưng cũng cần linh hoạt và sẵn sàng thoả hiệp khi cần thiết.
 
-Mình tin rằng một quy trình review tốt không chỉ cải thiện chất lượng sản phẩm mà còn giúp mọi người trong team phát triển, từ junior đến senior. Hy vọng bài viết này sẽ mang lại góc nhìn hữu ích cho bạn trong hành trình trở thành một code reviewer hiệu quả và có trách nhiệm.
+Mình tin rằng một quy trình review tốt không chỉ cải thiện chất lượng sản phẩm mà còn giúp mọi người trong team phát triển, từ junior đến senior. Hy vọng bài viết này sẽ mang lại góc nhìn hữu ích cho bạn trong hành trình trở thành một code reviewer hiệu quả.
 
 Cảm ơn bạn đã đọc!
 
