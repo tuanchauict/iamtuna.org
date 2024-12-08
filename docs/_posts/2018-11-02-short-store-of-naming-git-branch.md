@@ -5,7 +5,8 @@ author: "Tuna"
 comments: false
 category: Scripting
 tags: git lazy python bash
-custom_excerpt: |
+image: /images/2018-11-02/git-cover.webp
+excerpt: |
   Sharing experiences and challenges of naming git branches as a developer who prefers using UI tools over the console. Discussing the transition from long, descriptive branch names to more manageable ones...
 excerpt_separator: <!--more-->
 sticky: false

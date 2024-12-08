@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android adb debugging
-custom_excerpt: |
+excerpt: |
   Introducing a short trick to backup and restore local data for testing Android apps using ADB. This method is useful for managing test data, especially when dealing with different app versions or complex data setups...
 excerpt_separator: <!--more-->
 sticky: false

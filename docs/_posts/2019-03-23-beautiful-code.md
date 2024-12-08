@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Code review
 tags: code-review
-custom_excerpt: |
+excerpt: |
   Reflecting on a recent code review request from a friend, discussing the importance of writing clean and maintainable code. The example provided is in TypeScript, highlighting common pitfalls and best practices.
 excerpt_separator: <!--more-->
 sticky: false

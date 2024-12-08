@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android debugging adb
-custom_excerpt: |
+excerpt: |
   Exploring how to extend ADB to make app debugging easier. This involves using ADB for more than just basic commands, and integrating it with tools like dev menus, Facebook's Flipper, Stetho, or Hyperion to enhance the debugging experience...
 excerpt_separator: <!--more-->
 sticky: false

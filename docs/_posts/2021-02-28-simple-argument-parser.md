@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Scripting
 tags: python argument-parser lazy
-custom_excerpt: |
+excerpt: |
   Discussing a simple approach to creating an argument parser for Python scripts. This parser handles parameter arrays, supports positional and key-value arguments, and checks for key existence, offering a lightweight alternative to complex libraries...
 excerpt_separator: <!--more-->
 sticky: false

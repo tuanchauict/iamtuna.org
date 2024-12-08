@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode dynamic-programming python monotonic-stack
-custom_excerpt: |
+excerpt: |
   Discussing a dynamic programming approach to solve LeetCode problem #321: Create Maximum Number. The problem involves creating the maximum number of length k from two arrays while preserving the relative order of digits...
 excerpt_separator: <!--more-->
 sticky: false

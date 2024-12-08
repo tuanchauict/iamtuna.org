@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode python optimization
-custom_excerpt: |
+excerpt: |
   In this post, I share my approach to solving Leetcode problem #1653: Minimum Deletions to Make String Balanced. This challenge involves deleting characters from a string to ensure no 'b' precedes an 'a'. I discuss my strategy and experience aiming for a 100% success rate...
 excerpt_separator: <!--more-->
 sticky: false

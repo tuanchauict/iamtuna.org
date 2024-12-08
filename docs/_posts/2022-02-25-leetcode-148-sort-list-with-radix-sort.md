@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode python radix-sort
-custom_excerpt: |
+excerpt: |
   Exploring the implementation of Radix Sort to solve Leetcode problem #148: Sort List. The approach involves using a base of 10^exp and running the sort 5 times to cover all possible values, with detailed steps and code provided...
 excerpt_separator: <!--more-->
 sticky: false

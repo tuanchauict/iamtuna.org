@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android adb debugging bash
-custom_excerpt: |
+excerpt: |
   Revisiting the use of ADB to backup and restore test data, addressing changes since Android 10 that restrict file saving to app directories. Also exploring how Android Studio's Device Explorer manages to save and upload files despite these restrictions...
 excerpt_separator: <!--more-->
 sticky: false
