@@ -21,18 +21,23 @@
       </span>
       <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%b %d, %Y" }}</time>
     </div>
-    <p>
-      {% if post.custom_excerpt %}
-        {{ post.custom_excerpt | strip_html }}
+    <div class="catalogue-item-content">
+      <p>
+      {% if post.excerpt %}
+        {{ post.excerpt | strip_html }}
       {% else %}
         {% if post.excerpt_separator %}
-          {{ post.excerpt | strip_html }}
+        {{ post.excerpt | strip_html }}
         {% else %}
-          {{ post.content | strip_html | truncatewords: 30 }}
+        {{ post.content | strip_html | truncatewords: 30 }}
         {% endif %}
         ...
       {% endif %}
-    </p>
+      </p>
+      {% if post.image %}
+      <img src="{{ post.image }}" alt="{{ post.title }}" class="catalogue-item-image">
+      {% endif %}
+    </div>
 
   </div>
 </a>

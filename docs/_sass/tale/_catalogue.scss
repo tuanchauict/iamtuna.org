@@ -28,6 +28,27 @@
     flex-direction: column;
   }
 
+  &-item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin: 0;
+    gap: 0.8rem;
+
+    p {
+      flex-grow: 1;
+    }
+
+    img {
+      display: none;
+      max-width: 150px;
+
+      @media (min-width: $standard-content-width) {
+        display: block;
+      }
+    }
+  }
+
   &-title {
     color: $default-shade;
     font-family: $serif-primary;

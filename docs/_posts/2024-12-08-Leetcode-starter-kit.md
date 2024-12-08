@@ -7,7 +7,7 @@ category: Coding
 tags: leetcode vietnamese
 image: /images/2024/12/my-leetcode-stats.png
 excerpt: |
-  Một vài toolkit và tips cho những bạn mới bắt đầu với LeetCode một cách hiệu quả. Bên cạnh đó, mình cũng chia sẻ một số nguồn tham khảo để học về thuật toán và cấu trúc dữ liệu.
+  Một vài toolkit và tips cho những bạn mới bắt đầu với LeetCode một cách hiệu quả. Bên cạnh đó, mình cũng chia sẻ một số nguồn tham khảo để học về thuật toán và cấu trúc dữ liệu...
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
