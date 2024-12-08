@@ -17,7 +17,7 @@ Bên cạnh coding, *review code* và *mentoring* là hai trong số những cô
 
 Sau đây, mình xin chia sẻ một số việc mình thường làm khi review một [**Pull Request** (PR)][1].
 
-![Code Review](/images/2024-11/code-review.webp)
+![Code Review](/images/2024/11/code-review.webp)
 
 ## 1.  Đặt mình vào hoàn cảnh của tác giả
 
@@ -37,7 +37,7 @@ Hiểu được điều này, mình sẽ coi những lỗi này như những “
 
 Nguyên nhân chính thường là do tác giả phải chuyển đổi ngữ cảnh (context switch) nhiều, dẫn đến quên xử lý một vài đoạn code nhỏ.
 
-<img src="/images/2024-11/sympathy.png" width=250 alt="I know that feeling bro"/>
+<img src="/images/2024/11/sympathy.png" width=250 alt="I know that feeling bro"/>
 
 ## 2. Tránh dùng "you" 🫵
 
@@ -65,7 +65,7 @@ Tuy nhiên, không phải lúc nào cũng cần tránh hoàn toàn “you”. C�
 Hoặc vừa mới hôm qua, mình viết thế này:
 - _“If you want more fun and faster (in case the list is long), we can use binary search.”_
 
-<img src="/images/2024-11/uncle-sam.webp" width=300 alt="Uncle Sam"/>
+<img src="/images/2024/11/uncle-sam.webp" width=300 alt="Uncle Sam"/>
 
 ## 3. Không thoả hiệp với ambiguous code
 
@@ -93,7 +93,7 @@ Bên cạnh đó, mình cũng muốn nhấn mạnh rằng việc nhận biết m
 
 Đối với các bạn junior, thử thách còn lớn hơn vì các bạn vừa phải nỗ lực diễn giải đoạn code để hiểu rõ vấn đề, học cái mới,... vừa phải chống lại xu hướng tự diễn giải để nhận biết **bad code**. Đây là một sự cân bằng không dễ đạt được nhưng rất cần thiết để trở thành một reviewer giỏi.
 
-![Women yelling at cat](/images/2024-11/women-yelling-at-cat.jpg)
+![Women yelling at cat](/images/2024/11/women-yelling-at-cat.jpg)
 
 ## 4. Thoả hiệp
 
@@ -109,7 +109,7 @@ Mình sẽ nhẹ nhàng sử dụng *Request change*. Đây là công cụ mình
 
 Một vấn đề mình thường gặp là nhiều thành viên của team mình hay dùng là chứng minh code bằng thực nghiệm thay vì dựa trên lý thuyết hoặc phân tích logic, kiểu *“chạy thấy ổn, không có lỗi gì.”* Một số trường hợp thì cách chứng mình này có thể chấp nhận được, nhưng tốt hơn là sử dụng **theory**, **diagram**, hoặc **data flow analysis** để giải thích, nhất là với các vấn đề liên quan đến concurrency.
 
-<img src="/images/2024-11/this-is-fine.jpg" width=400 alt="This is fine">
+<img src="/images/2024/11/this-is-fine.jpg" width=400 alt="This is fine">
 
 ## Lời kết
 
