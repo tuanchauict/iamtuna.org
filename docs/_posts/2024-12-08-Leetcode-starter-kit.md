@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Leetcode starter kit"
+title:  "LeetCode starter kit"
 author: "Tuna"
 comments: false
-category: Coding
+category: Leetcode
 tags: leetcode vietnamese
 image: /images/2024/12/my-leetcode-stats.png
 excerpt: |
