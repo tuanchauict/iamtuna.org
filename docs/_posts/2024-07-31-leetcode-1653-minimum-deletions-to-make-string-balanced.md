@@ -5,6 +5,7 @@ author: "Tuna"
 comments: false
 category: Leetcode
 tags: leetcode python optimization
+image: /images/2024/07/7.png
 excerpt: |
   In this post, I share my approach to solving Leetcode problem #1653: Minimum Deletions to Make String Balanced. This challenge involves deleting characters from a string to ensure no 'b' precedes an 'a'. I discuss my strategy and experience aiming for a 100% success rate...
 excerpt_separator: <!--more-->
@@ -59,9 +60,9 @@ def minimumDeletions(self, s):
     return dp(0, False)
 ```
 
-> Note: In Python we don't have to deal with memoir explicitly, Python has `@lru_cache' or `@cache' to help us store the map of inputs and outputs. Sometimes it can be OOM due to locating the DP inside a method, but it works most of the time.
+> **Note**: In Python we don't have to deal with memoir explicitly, Python has `@lru_cache` or `@cache` to help us store the map of inputs and outputs. Sometimes, it can cause OOM due to locating the DP inside a method, but it works most of the time.
 
-The complexity is O(n) in both time and space. However, this got `Memory Limit Exceeded` on LeetCode. I'm not trying to solve this issue of top-down, but to move to a bottom-up approach.
+The complexity is **O(n)** for both time and space. However, this got `Memory Limit Exceeded` on LeetCode. I'm not trying to solve this issue of top-down, but to move to a bottom-up approach.
 
 ### 2: Bottom-Up
 ```python
@@ -80,7 +81,7 @@ def minimumDeletions(self, s):
 
 The same to before, but this time, we don't need to use recursion, so, the memory won't be eaten quickly due to the call-stack.
 
-![Bottom-Up result](/images/2024-07-31/bottom-up.png)
+![Bottom-Up result](/images/2024/07/bottom-up.png)
 
 Same time and space complexity but we don't get MLE anymore because of eliminating the recursion call-stack.
 
@@ -102,7 +103,7 @@ def minimumDeletions(self, s: str) -> int:
 
 Here is what we got after reducing the memory usage to O(1)
 
-![O(1) space - 1](/images/2024-07-31/3.png)
+![O(1) space - 1](/images/2024/07/3.png)
 
 The result is much faster than #2, however, there are things we can do to improve the runtime.
 
@@ -118,7 +119,7 @@ def minimumDeletions(self, s: str) -> int:
     return a
 ```
 
-![O(1) space - 2](/images/2024-07-31/4.png)
+![O(1) space - 2](/images/2024/07/4.png)
 
 By eliminating the method call (`min(1+a,b)`), we also reduce the runtime by 90ms (~30% improvement). In the real product, if we could get a 30% performance improvement, that's a big jump (unfortunately, in the real world, things are never that simple).
 
@@ -136,7 +137,7 @@ def minimumDeletions(self, s: str) -> int:
     return a
 ```
 
-![O(1) space - 3](/images/2024-07-31/5.png)
+![O(1) space - 3](/images/2024/07/5.png)
 
 Since we don't need the index anymore, we don't need to use `range'. Unlike the other language, Python does not have a `char` datatype and also accessing an array or list takes some overhead. Therefore, using the language feature could improve performance. (because they are implemented in C/C++).
 
@@ -170,7 +171,7 @@ def minimumDeletions(self, s: str) -> int:
 ```
 
 
-![O(1) space - 4](/images/2024-07-31/6.png)
+![O(1) space - 4](/images/2024/07/6.png)
 
 What happens? How can the code improve?
 
@@ -196,7 +197,7 @@ So, how?
 
 ### 7.
 
-![O(1) space - 5](/images/2024-07-31/7.png)
+![O(1) space - 5](/images/2024/07/7.png)
 
 HOW?
 
