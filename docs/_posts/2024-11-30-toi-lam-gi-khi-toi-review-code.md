@@ -9,6 +9,7 @@ image: /images/2024/11/code-review.webp
 excerpt: |
   Code review không chỉ là kiểm tra chất lượng, mà còn là cơ hội để nâng cao kỹ năng và xây dựng sự đồng cảm trong team. Bài viết chia sẻ những nguyên tắc mình áp dụng khi review, từ cách giữ thái độ khách quan, tránh dùng “you”, đến việc thoả hiệp với tech debt. Hy vọng những kinh nghiệm này sẽ giúp bạn trở thành một reviewer hiệu quả, góp phần cải thiện cả chất lượng code và cả team...
 excerpt_separator: <!--more-->
+lang: vi
 sticky: false
 hidden: false
 draft: false

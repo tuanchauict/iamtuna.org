@@ -4,7 +4,7 @@
   max-width: $standard-content-width;
   margin: 0 auto;
 
-  &-title {
+  .post-title {
     color: $default-shade;
     font-family: $serif-primary;
     font-weight: 500;
@@ -13,7 +13,7 @@
     // text-align: center;
   }
 
-  &-info {
+  .post-info {
     color: $grey-1;
     font-family: $sans-serif;
     font-size: 0.8rem;
@@ -56,13 +56,13 @@
     margin: 0;
   }
 
-  &-tags {
+  .post-tags {
     margin: 1.5rem 0 0;
     font-family: $sans-serif;
     font-size: 0.8rem;
   }
 
-  & &-tag-item {
+  & .post-tag-item {
     padding: 0.2rem 0.3rem;
     margin-right: 0.2rem;
     border-radius: 4px;
@@ -86,6 +86,11 @@
     &.box-note {
       border-left-color: rgb(97, 171, 251);
       background: rgb(241, 252, 254);
+    }
+
+    &.box-warning {
+      border-left-color: rgb(255, 204, 0);
+      background: rgb(255, 248, 225);
     }
 
     &.box-italic {

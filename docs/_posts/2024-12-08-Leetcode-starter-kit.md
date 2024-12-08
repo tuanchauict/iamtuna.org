@@ -9,6 +9,7 @@ image: /images/2024/12/my-leetcode-stats.png
 excerpt: |
   Một vài toolkit và tips cho những bạn mới bắt đầu với LeetCode một cách hiệu quả. Bên cạnh đó, mình cũng chia sẻ một số nguồn tham khảo để học về thuật toán và cấu trúc dữ liệu...
 excerpt_separator: <!--more-->
+lang: vi
 sticky: false
 hidden: false
 draft: false
@@ -29,7 +30,7 @@ Nếu bạn nóng lòng xem danh sách về các tài liệu học Cấu trúc d
 
 ## Giới thiệu
 
-Mình không giỏi về thuật toán và cũng không phải dân chơi CP (competitive programming), nên khi bắt đầu với LeetCode, mình đã bị ngợp và không biết bắt đầu từ đâu, mất rất nhiều thời gian để giải những bài đầu tiên. Mình đoán nhiều bạn cũng có cảm giác tương tự khi bắt đầu với LeetCode. Bài viết này tổng hợp một vài thứ có thể hữu ích cho những bạn giống mình.
+Mình không giỏi về thuật toán và cũng không phải dân chơi [CP (Competitive Programming)](https://en.wikipedia.org/wiki/Competitive_programming), nên khi bắt đầu với LeetCode, mình đã bị ngợp và không biết bắt đầu từ đâu, mất rất nhiều thời gian để giải những bài đầu tiên. Mình đoán nhiều bạn cũng có cảm giác tương tự khi bắt đầu với LeetCode. Bài viết này tổng hợp một vài thứ có thể hữu ích cho những bạn giống mình.
 
 > Trong bài này, thuật ngữ "**_Thuật toán_**" hoặc "**_Algorithm_**" được dùng để chỉ các thuật toán theo sách giáo khoa hoặc cần một vài bước suy luận và các cách tiếp cận cụ thể, khác với nghĩa của từ "thuật toán" nói chung, vốn có thể dùng cho tất cả logic trong code.
 
@@ -50,28 +51,32 @@ By the way, lựa chọn nền tảng nào cũng được, điều quan trọng 
 [codechef]: https://www.codechef.com/
 [kattis]: https://open.kattis.com/
 
-## 1. Lúc nào thì nên bắt đầu Leetcode?
+## 1. Lúc nào thì nên bắt đầu LeetCode?
 Câu trả lời ngắn gọn là **bây giờ**.
 
-Tuy nhiên, **_nếu bạn chưa từng học về **Data Structures & Algorithms (DS&A)**, hãy học một khoá về DS&A trước khi bắt đầu làm LeetCode_**. Điều này sẽ giúp bạn có cái nhìn tổng quan về các thuật toán và cấu trúc dữ liệu, giúp bạn dễ dàng hơn khi tiếp cận các bài toán phức tạp hơn cũng như có thể đọc hiểu được các lời giải từ các bài viết trên mạng.
+Tuy nhiên, **nếu bạn chưa từng học về _Data Structures & Algorithms (DS&A)_, hãy học một khoá về DS&A trước khi bắt đầu làm LeetCode**. Điều này sẽ giúp bạn có cái nhìn tổng quan về các thuật toán và cấu trúc dữ liệu, giúp bạn dễ dàng hơn khi tiếp cận các bài toán phức tạp hơn cũng như có thể đọc hiểu được các lời giải từ các bài viết trên mạng.
 
 Nếu bạn ít khi phải giải quyết vấn đề bằng một thuật toán nào đó, khả năng bạn sẽ mất cảm giác về việc sử dụng thuật toán, các cấu trúc dữ liệu phức tạp ngoài `ArrayList` hoặc `HashMap`. Bắt đầu sớm sẽ giúp bạn lấy lại cảm giác và xây dựng được một **_[mental model][mental-model]_** về các thuật toán và cấu trúc dữ liệu cần thiết để giải các bài khó hơn hoặc áp dụng được vào công việc hằng ngày.
 
 Với các bạn đã học DS&A, không cần phải phân vân liệu bạn có cần học lại DS&A trước hay không, chỉ cần **bắt đầu**. Khi gặp phải một bài toán cần một giải thuật cụ thể, lúc đó hãy tham khảo các tài liệu liên quan (xem [các nguồn tham khảo](#dsa-resources)). Phương pháp tiếp cận vừa làm vừa ôn / học này sẽ đơn giản và có hướng đi rõ ràng hơn việc học lý thuyết thuần rồi mới bắt tay vào làm bài tập. Công thức của mình là:
-1. Làm LeetCode.
-2. Gặp câu không giải được.
-3. Xem lời giải.
-4. Tìm hiểu các giải thuật và cấu trúc dữ liệu liên quan.
-5. Giải các bài liên quan để củng cố.
+
+{: .box-warning }
+> 1. Làm LeetCode.
+> 2. Gặp câu không giải được.
+> 3. Xem lời giải.
+> 4. Tìm hiểu các cấu trúc dữ liệu và giải thuật liên quan.
+> 5. Giải các bài liên quan để củng cố.
 
 Tuy nhiên, để tránh nản lòng, bạn **không nên chọn một câu ngẫu nhiên để làm bài đầu tiên.** Nếu câu LeetCode đầu tiên của bạn yêu cầu đến những khái niệm khó như **Dynamic Programming**, **LinkedList**, hay **Binary Tree**, bạn sẽ dễ cảm thấy bế tắc. Vì vậy, hãy bắt đầu với những câu cơ bản, dễ hiểu để xây dựng nền tảng.
 
 **Một vài bài LeetCode đơn giản giúp bạn khởi động:**
-1. **[Two Sum][two-sum]** (Easy - Array): Một bài cơ bản giúp làm quen với cách xử lý mảng và sử dụng HashMap.
-2. **[Reverse String][reverse-string]** (Easy - String): Một bài luyện tập đơn giản liên quan đến thao tác chuỗi.
-3. **[Merge Two Sorted Lists][merge-lists]** (Easy - LinkedList): Giúp bạn làm quen với cách thao tác trên danh sách liên kết.
-4. **[Best Time to Buy and Sell Stock][best-time]** (Easy - Array): Một bài cơ bản để hiểu cách tìm giá trị tối ưu với một vòng lặp đơn.
-5. **[Valid Parentheses][valid-parent]** (Easy - Stack): Một bài tập phổ biến để làm quen với cấu trúc dữ liệu Stack.
+
+{: .box-note }
+> 1. **[Two Sum][two-sum]** (Easy - Array): Một bài cơ bản giúp làm quen với cách xử lý mảng và sử dụng HashMap.
+> 2. **[Reverse String][reverse-string]** (Easy - String): Một bài luyện tập đơn giản liên quan đến thao tác chuỗi.
+> 3. **[Merge Two Sorted Lists][merge-lists]** (Easy - LinkedList): Giúp bạn làm quen với cách thao tác trên danh sách liên kết.
+> 4. **[Best Time to Buy and Sell Stock][best-time]** (Easy - Array): Một bài cơ bản để hiểu cách tìm giá trị tối ưu với một vòng lặp đơn.
+> 5. **[Valid Parentheses][valid-parent]** (Easy - Stack): Một bài tập phổ biến để làm quen với cấu trúc dữ liệu Stack.
 
 [mental-model]: https://en.wikipedia.org/wiki/Mental_model
 [two-sum]: https://leetcode.com/problems/two-sum/
@@ -82,7 +87,6 @@ Tuy nhiên, để tránh nản lòng, bạn **không nên chọn một câu ng�
 
 Bắt đầu với những bài như thế này không chỉ giúp bạn làm quen với nền tảng LeetCode mà còn mang lại cảm giác thành công, từ đó tăng thêm động lực để tiếp tục hành trình.
 
-
 ## 2. Dùng ngôn ngữ lập trình gì cho LeetCode?
 Có ba ngôn ngữ bạn nên cân nhắc lựa chọn khi làm LeetCode:
 
@@ -90,7 +94,7 @@ Có ba ngôn ngữ bạn nên cân nhắc lựa chọn khi làm LeetCode:
 Nếu bạn nhắm đến ứng tuyển vào một công ty hoặc team yêu cầu sử dụng ngôn ngữ cụ thể, hãy ưu tiên học và thực hành bằng ngôn ngữ đó.
 
 **_2. Ngôn ngữ bạn đang sử dụng và quen thuộc._**
-Sử dụng ngôn ngữ mà bạn đã nắm vững sẽ giảm bớt áp lực khi vừa phải học thuật toán vừa phải làm quen với cú pháp mới. Điều này giúp bạn tập trung nhiều hơn vào tư duy giải quyết vấn đề và cải thiện logic lập trình.
+Sử dụng ngôn ngữ mà bạn đã nắm vững sẽ giảm bớt áp lực khi vừa phải học thuật toán vừa phải làm quen với cú pháp mới. Việc này giúp bạn tập trung nhiều hơn vào tư duy giải quyết vấn đề và cải thiện logic lập trình.
 
 **_3. Python._**
 Với mình, Python là lựa chọn lý tưởng sau **pseudo code** để mô phỏng thuật toán. Ngôn ngữ này rất dễ học, cú pháp đơn giản và không yêu cầu nhiều bước chuẩn bị. Ví dụ:
@@ -122,24 +126,24 @@ Python có số lượng thư viện tích hợp lớn, hỗ trợ nhiều cấu
 
 **_3. Code block by indent_**
 
-Một điều ít khi được để ý là việc dùng indent (4-space) để định nghĩa các code block thay vì các cặp `{...}` hay `begin...end` trong Pascal thực sự hữu ích, nhất là trong phỏng vấn khi dùng bảng vì nó giúp code ngắn gọn và tiết kiệm không gian rất nhiều.
+Một điều ít khi được để ý là việc dùng indent (4-space) để định nghĩa các code block thay vì các cặp `{...}` hay `begin...end` trong Pascal thực sự hữu ích, nhất là trong phỏng vấn khi dùng bảng, vì nó giúp code ngắn gọn và tiết kiệm không gian rất nhiều.
 
 Ví dụ, khi phải viết 2 vòng lặp lồng nhau:
 
 - Với Java hoặc C++:
 ```java
-1 for (int i = 0; i < n; i++) {
-2     for (int j = 0; j < m; j++) {
-3         // ...
-4     }
-5 }
+1  for (int i = 0; i < n; i++) {
+2      for (int j = 0; j < m; j++) {
+3          // ...
+4      }
+5  }
 ```
 
 - Với Python:
 ```python
-1 for i in range(n):
-2     for j in range(m):
-3         # ...
+1  for i in range(n):
+2      for j in range(m):
+3          # ...
 ```
 
 
@@ -150,17 +154,20 @@ Ngoài ra, đặt ngưỡng thời gian cho mỗi level của bài toán (Easy, 
 
 Ngưỡng thời gian mình đặt cho mỗi level _(bạn có thể điều chỉnh ngưỡng thời gian cho phù hợp với mình)_:
 
-- **Easy**: Dưới 15 phút.
-- **Medium**: Dưới 30 phút.
-- **Hard**: Dưới 60 phút.
+{: .box-note }
+> - **Easy**: Dưới 15 phút.
+> - **Medium**: Dưới 30 phút.
+> - **Hard**: Dưới 60 phút.
 
 Nếu vượt quá thời gian mà vẫn chưa tìm ra lời giải, mình sẽ xem hướng dẫn hoặc lời giải để học hỏi cách tiếp cận. Sau đó, mình không vội code và submit ngay, mà để dành bài đó cho ngày hôm sau, nhằm kiểm tra xem mình đã thực sự hiểu và áp dụng được phương pháp hay chưa.
 
 ## 4. Viết note
 Khi giải một bài toán, hãy note lại các thông tin sau:
-- **Intuition**: Từ mô tả bài toán, suy luận các giải thuật, cấu trúc dữ liệu, hoặc chiến lược có thể dùng để giải bài toán, các edge cases cần lưu ý, v.v.
-- **Time and Space Complexity**: Đánh giá Big-0 của lời giải của bạn.
-- **Các ghi chú khác**, ví dụ, đã sai ở đâu, cần bao nhiêu lần chạy thử, thời gian giải bài, v.v.
+
+{: .box-note }
+> - **Intuition**: Từ mô tả bài toán, suy luận các giải thuật, cấu trúc dữ liệu, hoặc chiến lược có thể dùng để giải bài toán, các edge cases cần lưu ý, v.v.
+> - **Time & Space Complexity**: Đánh giá Big-0 của lời giải của bạn.
+> - **Các ghi chú khác**, ví dụ, đã sai ở đâu, cần bao nhiêu lần chạy thử, thời gian giải bài, v.v.
 
 Những ghi chú này giúp bạn luyện tập kỹ năng trao đổi trong quá trình phỏng vấn, cũng như theo dõi lỗi sai và sự tiến bộ của mình qua từng bài toán. Dưới đây là mẫu ghi chú mà mình sử dụng:
 
@@ -198,6 +205,8 @@ Chủ đề mình gợi ý bạn nên dùng để bắt đầu là [Binary Searc
 
 - Đây là một thuật toán cơ bản nhưng cực kỳ quan trọng. Binary Search không chỉ xuất hiện trong các bài toán trực tiếp mà còn là nền tảng cho nhiều dạng bài phức tạp hơn như tìm kiếm trên không gian câu trả lời (searching on answer space).
 - Một khi bạn hiểu rõ cách hoạt động của Binary Search, bạn sẽ dễ dàng áp dụng nó vào các bài toán như tìm kiếm trên mảng, tối ưu hóa giá trị, hoặc các bài toán liên quan đến đồ thị.
+- Cách hiện thực của Binary Search rất dễ rơi vào vòng lặp vô hạn hoặc sai lệch, việc luyện tập nhiều bài toán liên quan sẽ giúp bạn hiểu rõ hơn về cách xử lý các trường hợp đặc biệt và cách debug hiệu quả.
+- Một thông tin giúp bạn thêm tự tin là [thư viện chuẩn của Java từng có bug trong code của hàm Binary Search][java-bug-bst].
 
 Tiếp theo, bạn có thể chọn chủ đề luyện tập dựa trên sở thích cá nhân hoặc các dạng bài toán bạn thường gặp. Đừng quên tận dụng [Study Plan][study-plan] của LeetCode để xây dựng lộ trình phù hợp.
 
@@ -208,7 +217,7 @@ Ngoài ra, bạn cũng có thể tham khảo các curated list có sẵn như [L
 [study-plan]: https://leetcode.com/studyplan/
 [lc75]: https://leetcode.com/studyplan/leetcode-75/
 [grokking-list]: https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4
-
+[java-bug-bst]: https://dev.to/matheusgomes062/a-bug-was-found-in-java-after-almost-9-years-of-hiding-2d4k
 
 ## 6. Một số toolkit khác
 #### Làm bài daily
@@ -233,12 +242,12 @@ Bạn có thể tham khảo thêm bài viết [Let's code with Leetcode](letscod
 [vscode-insiders]: https://code.visualstudio.com/insiders/
 [letcode]: https://iamtuna.org/2019-01-05/lets-code-with-leetcode
 
-#### Hướng tới việc 1 hit 1 ~~kill~~ accepted
-Điều này hàm ý bạn có một giai đoạn phân tích và test các phân tích của mình trước khi viết code. 
+#### Hướng tới 1 hit 1 ~~kill~~ accepted
+Hàm ý rằng bạn có một giai đoạn phân tích và test các phân tích của mình trước khi viết code. 
 
-Đừng vội vàng viết code ngay khi đọc xong đề, hãy đảm bảo bạn đã hiểu rõ yêu cầu và cách tiếp cận bài toán. Một khi bạn đã viết code, hãy **_tự chạy tay_** trước khi nhấn **`Run`** và test kỹ trước khi **`Submit`**.
+Đừng vội vàng viết code ngay khi đọc xong đề, hãy đảm bảo bạn đã hiểu rõ yêu cầu và cách tiếp cận bài toán. Một khi bạn đã viết code, hãy **_tự chạy tay_** trước khi nhấn **`Run`**, đồng thời test kỹ trước khi **`Submit`**.
 
-Đây là cách hiệu quả để luyện tập cho việc viết code trong môi trường phỏng vấn.
+Đây cũng là cách hiệu quả để luyện tập cho việc viết code trong môi trường phỏng vấn.
 
 #### Đặt giới hạn số dòng code cho lời giải
 Mình đặt giới hạn trên cho một bài giải thông thường là **20 LOC** (cho Python), trừ các bài toán cần hiện thực thêm các helper hoặc cấu trúc dữ liệu hỗ trợ (ví dụ Segment Tree, Trie, v.v).
@@ -248,14 +257,14 @@ Khi code bị dài không cần thiết, có 2 khả năng xảy ra:
 - Thêm hacky code để pass các test case.
 
 #### Cố gắng đạt được `P50` trở lên
-Thông thường, nếu lựa chọn đúng cấu trúc dữ liệu và giải thuật, code của bạn sẽ đạt được P50 (beats 50% submission) về thời gian chạy. Khi chưa đạt được, hãy thử suy nghĩ thêm hoặc tham khảo các lời giải tối ưu hơn để cải thiện.
+Thông thường, nếu lựa chọn đúng cấu trúc dữ liệu và giải thuật, code của bạn sẽ đạt được P50 (beats 50% submissions) về thời gian chạy. Khi chưa đạt được, hãy thử suy nghĩ thêm hoặc tham khảo các lời giải tối ưu hơn để cải thiện.
 
 ![Sample about P74](/images/2024/12/p74-daily.png)
 
 ## Các nguồn tham khảo để học về DS&A
 {: #dsa-resources }
 
-![alt text](/images/2024/12/algo-books.png)
+![Algorithm books](/images/2024/12/algo-books.png)
 
 #### Sách
 - **[The Algorithm Design Manual](http://www.algorist.com/)**: Một cuốn sách khác về thuật toán và cấu trúc dữ liệu, được viết bởi Steven S. Skiena. Theo đánh giá của mình thì cuốn này phù hợp hơn với người đã đi làm và muốn cải thiện kỹ năng thuật toán.
