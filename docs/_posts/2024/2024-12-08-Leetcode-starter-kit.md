@@ -54,11 +54,11 @@ By the way, lựa chọn nền tảng nào cũng được, điều quan trọng 
 ## 1. Lúc nào thì nên bắt đầu LeetCode?
 Câu trả lời ngắn gọn là **bây giờ**.
 
-Tuy nhiên, **nếu bạn chưa từng học về _Data Structures & Algorithms (DS&A)_, hãy học một khoá về DS&A trước khi bắt đầu làm LeetCode**. Điều này sẽ giúp bạn có cái nhìn tổng quan về các thuật toán và cấu trúc dữ liệu, giúp bạn dễ dàng hơn khi tiếp cận các bài toán phức tạp hơn cũng như có thể đọc hiểu được các lời giải từ các bài viết trên mạng.
+> **Nếu bạn chưa từng học về _Data Structures & Algorithms (DS&A)_, hãy học một khoá về DS&A trước khi bắt đầu làm LeetCode**. Điều này sẽ giúp bạn có cái nhìn tổng quan về các thuật toán và cấu trúc dữ liệu, giúp bạn dễ dàng hơn khi tiếp cận các bài toán phức tạp hơn cũng như có thể đọc hiểu được các lời giải từ các bài viết trên mạng.
 
-Nếu bạn ít khi phải giải quyết vấn đề bằng một thuật toán nào đó, khả năng bạn sẽ mất cảm giác về việc sử dụng thuật toán, các cấu trúc dữ liệu phức tạp ngoài `ArrayList` hoặc `HashMap`. Bắt đầu sớm sẽ giúp bạn lấy lại cảm giác và xây dựng được một **_[mental model][mental-model]_** về các thuật toán và cấu trúc dữ liệu cần thiết để giải các bài khó hơn hoặc áp dụng được vào công việc hằng ngày.
+Với các bạn đã học DS&A (chuyên ngành CSE hoặc tự học), nếu ít khi phải giải quyết vấn đề bằng một thuật toán nào đó, khả năng bạn sẽ mất cảm giác về việc sử dụng thuật toán, các cấu trúc dữ liệu phức tạp ngoài `ArrayList` hoặc `HashMap`, v.v. Bắt đầu sớm sẽ giúp bạn lấy lại cảm giác và xây dựng được một **_[mental model][mental-model]_** về các thuật toán và cấu trúc dữ liệu cần thiết để giải các bài khó hơn hoặc áp dụng được vào công việc hằng ngày.
 
-Với các bạn đã học DS&A, không cần phải phân vân liệu bạn có cần học lại DS&A trước hay không, chỉ cần **bắt đầu**. Khi gặp phải một bài toán cần một giải thuật cụ thể, lúc đó hãy tham khảo các tài liệu liên quan (xem [các nguồn tham khảo](#dsa-resources)). Phương pháp tiếp cận vừa làm vừa ôn / học này sẽ đơn giản và có hướng đi rõ ràng hơn việc học lý thuyết thuần rồi mới bắt tay vào làm bài tập. Công thức của mình là:
+Không cần phải phân vân liệu có cần học lại DS&A trước hay không, chỉ cần bạn **bắt đầu**. Khi gặp phải một bài toán cần một giải thuật cụ thể, lúc đó hãy tham khảo các tài liệu liên quan (xem [các nguồn tham khảo](#dsa-resources)). Phương pháp tiếp cận vừa làm vừa ôn / học này sẽ đơn giản và có hướng đi rõ ràng hơn việc học lý thuyết thuần rồi mới bắt tay vào làm bài tập. Công thức của mình là:
 
 {: .box-warning }
 > 1. Làm LeetCode.
@@ -208,12 +208,15 @@ Chủ đề mình gợi ý bạn nên dùng để bắt đầu là [Binary Searc
 - Cách hiện thực của Binary Search rất dễ rơi vào vòng lặp vô hạn hoặc sai lệch, việc luyện tập nhiều bài toán liên quan sẽ giúp bạn hiểu rõ hơn về cách xử lý các trường hợp đặc biệt và cách debug hiệu quả.
 - Một thông tin giúp bạn thêm tự tin là [thư viện chuẩn của Java từng có bug trong code của hàm Binary Search][java-bug-bst].
 
+(Bạn có thể tham khảo Study Plan về [Binary Search][binary-search-plan] trên LeetCode để bắt đầu.)
+
 Tiếp theo, bạn có thể chọn chủ đề luyện tập dựa trên sở thích cá nhân hoặc các dạng bài toán bạn thường gặp. Đừng quên tận dụng [Study Plan][study-plan] của LeetCode để xây dựng lộ trình phù hợp.
 
 Ngoài ra, bạn cũng có thể tham khảo các curated list có sẵn như [LeetCode 75][lc75] hoặc [Grokking the Code Interview similar list][grokking-list] để luyện tập hiệu quả hơn.
 
 
-[binary-search]: https://leetcode.com/studyplan/binary-search/
+[binary-search]: https://en.wikipedia.org/wiki/Binary_search
+[binary-search-plan]: https://leetcode.com/studyplan/binary-search/
 [study-plan]: https://leetcode.com/studyplan/
 [lc75]: https://leetcode.com/studyplan/leetcode-75/
 [grokking-list]: https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4
@@ -231,7 +234,7 @@ LeetCode daily problem đôi lúc khó, đôi lúc dễ, và thường mang tín
 ![My badges](/images/2024/12/badges.png)
 
 #### Hãy dùng IDE khi mới bắt đầu
-Hầu hết chúng ta đều phụ thuộc khá nhiều vào các công cụ hỗ trợ như _auto-complete_, _auto-import_, hay thậm chí gần đây là AI để viết code. Chính vì vậy, Việc viết trực tiếp trên LeetCode editor có thể khiến bạn gặp khó khăn, đặc biệt với các lỗi như sai cú pháp, thiếu import,…
+Hầu hết chúng ta đều phụ thuộc khá nhiều vào các công cụ hỗ trợ như _auto-complete_, _auto-import_, hay thậm chí gần đây là AI để viết code. Chính vì vậy, việc viết trực tiếp trên LeetCode editor có thể khiến bạn gặp khó khăn, đặc biệt với các lỗi như sai cú pháp, thiếu import,…
 
 Để tránh những rào cản ban đầu này, hãy dùng IDE khi luyện tập, với các công cụ tự động hóa được giới hạn hợp lý. Ví dụ, chỉ bật _auto-import_ và tắt _auto-complete_ cùng AI để rèn luyện khả năng viết code thủ công. Cá nhân mình dùng **[VS Code - Insiders][vscode-insiders]** (phiên bản early release của VS Code) cho LeetCode và cấu hình mặc định tắt hết tất cả các tool automation đi.
 
@@ -267,9 +270,9 @@ Thông thường, nếu lựa chọn đúng cấu trúc dữ liệu và giải t
 ![Algorithm books](/images/2024/12/algo-books.png)
 
 #### Sách
-- **[The Algorithm Design Manual](http://www.algorist.com/)**: Một cuốn sách khác về thuật toán và cấu trúc dữ liệu, được viết bởi Steven S. Skiena. Theo đánh giá của mình thì cuốn này phù hợp hơn với người đã đi làm và muốn cải thiện kỹ năng thuật toán.
 - **[Algorithms (4th Edition)][algorithms-book]**: Một trong những cuốn sách nền tảng về thuật toán và cấu trúc dữ liệu.
-- **[Introduction to Algorithms (3rd Edition)][clrs-book]**: Một cuốn sách khác về thuật toán và cấu trúc dữ liệu, thường được dùng trong các khóa học về DS&A.
+- **[Introduction to Algorithms (3rd Edition)][clrs-book]**: Một cuốn sách khác về thuật toán và cấu trúc dữ liệu, thường được dùng trong các khóa học về DS&A. Sẽ có người thích cuốn này hơn cuốn trên.
+- **[The Algorithm Design Manual](http://www.algorist.com/)**: Một cuốn sách khác về thuật toán và cấu trúc dữ liệu, được viết bởi Steven S. Skiena. Theo đánh giá của mình thì cuốn này phù hợp hơn với người đã đi làm và muốn cải thiện kỹ năng thuật toán.
 - **[Giải thuật và lập trình][vietnamese-books]**: Một cuốn sách tiếng Việt về thuật toán và lập trình của thầy Lê Minh Hoàng thường được dùng trong luyện tập cho CP.
 - **[Các tài liệu tiếng Việt khác][vietnamese-books]**: Một số tài liệu tiếng Việt khác về thuật toán và lập trình được liệt kê và tổng hợp trên VNOI Wiki.
 
