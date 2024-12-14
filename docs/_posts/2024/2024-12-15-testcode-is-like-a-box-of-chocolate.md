@@ -145,6 +145,10 @@ _"Test code giống như hộp sô-cô-la, bạn sẽ không bao giờ biết m�
 
 (bắt chước câu "_**Life is like a box of chocolates** - Forrest Gump_")
 
+
+![Forrest Gump](https://rare-gallery.com/thumbnail/72620-Tom-HanksForrest-Gump-HD-Wallpaper.jpg)
+*Credit: [rare-gallery.com](https://rare-gallery.com/72620-forrest-gump-hd-wallpapertom-hanks.html)*
+
 ## Đọc thêm
 - [Testing on the Toilet: Tests Too DRY? Make Them DAMP!](https://testing.googleblog.com/2019/12/testing-on-toilet-tests-too-dry-make.html)
 

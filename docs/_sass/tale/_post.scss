@@ -38,10 +38,14 @@
   img + em {
     color: $default-tint;
     display: block;
-    font-family: $sans-serif;
-    font-size: 0.9rem;
+    font-family: $monospaced;
+    font-size: 0.8rem;
     font-style: normal;
     text-align: center;
+
+    a {
+      color: $grey-1;
+    }
   }
 
   // CSS for making emoji inline
