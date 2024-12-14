@@ -131,20 +131,20 @@ Một điều ít khi được để ý là việc dùng indent (4-space) để 
 Ví dụ, khi phải viết 2 vòng lặp lồng nhau:
 
 - Với Java hoặc C++:
-```java
-1  for (int i = 0; i < n; i++) {
-2      for (int j = 0; j < m; j++) {
-3          // ...
-4      }
-5  }
-```
+{% highlight java  linenos %}
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+        // ...
+    }
+}
+{% endhighlight %}
 
 - Với Python:
-```python
-1  for i in range(n):
-2      for j in range(m):
-3          # ...
-```
+{% highlight python  linenos %}
+for i in range(n):
+    for j in range(m):
+        # ...
+{% endhighlight %}
 
 
 ## 3. Hãy đo thời gian giải bài
