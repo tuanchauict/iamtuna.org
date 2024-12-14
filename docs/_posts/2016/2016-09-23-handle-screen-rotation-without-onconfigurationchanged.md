@@ -5,13 +5,15 @@ author: "Tuna"
 comments: false
 category: Android
 tags: android screen-orientation
+excerpt: |
+  Learn how to handle screen rotation in Android without using `onConfigurationChanged`, by leveraging `OrientationEventListener` to create responsive views that adapt to orientation changes smoothly.
 excerpt_separator: <!--more-->
 sticky: false
 hidden: false
 draft: false
 ---
 
-Especially on camera view, we need to implement a view that can adapt to the screen’s orientation without having a splash of android native screen rotation handler. To do this, we just need to create an instance of [OrientationEventListener](http://developer.android.com/reference/android/view/OrientationEventListener.html) with an abstract method `onOrientationChanged`<!--more-->. The method takes a parameter for the degree of screen from _**0**_ to _**359**_ and _**-1**_ for screen flipping.
+Especially for camera views, we need to implement a view that can adapt to the screen’s orientation without relying on the native Android screen rotation handler. To achieve this, we create an instance of [OrientationEventListener](http://developer.android.com/reference/android/view/OrientationEventListener.html) with an abstract method `onOrientationChanged`. This method takes a parameter representing the screen's degree from _**0**_ to _**359**_, and _**-1**_ for screen flipping.
 
 Example:
 
@@ -28,9 +30,9 @@ void onCreate(Bundle savedInstanceState){
 }
 ```
 
-From this point, I created two shortcut class event listeners that were based on OrientationEventListener.
+From this point, I created two shortcut classes based on `OrientationEventListener`.
 
-The first class is `SimpleOrientationEventListener` that calculates the orientation of current screen and fires out by `onChanged` abstract method in `onOrientationChanged`. Below is the method.
+The first class is `SimpleOrientationEventListener`, which calculates the current screen orientation and triggers the `onChanged` abstract method in `onOrientationChanged`. Below is the method.
 
 ```java
 @Override
@@ -58,8 +60,7 @@ public final void onOrientationChanged(int orientation) {
     }
 }
 ```
-
-The second class is `RotateOrientationEventListener` that calculates which rotation degrees suit to view to rotate smoothly. This class extends from `SimpleOrientationEventListener` and calculates based on the `onChanged` method, then fires out via `onRotateChanged` abstract method.
+The second class is `RotateOrientationEventListener`, which calculates the appropriate rotation degrees for smooth view rotation. This class extends `SimpleOrientationEventListener` and uses the `onChanged` method to determine the rotation, then triggers the `onRotateChanged` abstract method.
 
 ```java
 @Override
@@ -78,10 +79,9 @@ public final void onChanged(int lastOrientation, int orientation) {
     onRotateChanged(startDeg, endDeg);
 }
 ```
+You can find the [full code for both classes here](https://gist.github.com/tuanchauict/6a885779c0940a012b81).
 
-You can get [full code of two classes here](https://gist.github.com/tuanchauict/6a885779c0940a012b81).
-
-To test the code, you have to set `screenOrientation` to `landscape` or `portrait` in `AndroidManifest.xml` or `setRequestedOrientation` in the activity.
+To test the code, set `screenOrientation` to `landscape` or `portrait` in `AndroidManifest.xml` or use `setRequestedOrientation` in the activity.
 
 > *Bonus: This is an example of how to apply the startDeg and endDeg above to views:*
 
