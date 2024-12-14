@@ -18,16 +18,15 @@ draft: false
 ## Introduction
 
 
-As some of you may know, I created an ASCII drawing app called [MonoSketch][git-monosketch]. Initially developed in Kotlin/JS, the app’s architecture served us well for the early iterations. However, the UI is always a bottleneck whenever I want to add more feature. This led to the decision to rewrite MonoSketch in TypeScript.
+As some of you may know, I created an ASCII drawing app called [MonoSketch][git-monosketch]. Initially developed in Kotlin/JS, the app’s architecture served us well for the early iterations. However, the UI became a bottleneck whenever I wanted to add more features. This led to the decision to rewrite MonoSketch in TypeScript.
 
-Rewriting in TypeScript, with [Svelte][svelte] for the UI, offered several advantages: a more streamlined approach to UI development, better integration with FrontEnd web technologies, and improved the simplicity for future features. However, one key challenge we faced was handling JSON serialization and deserialization in TypeScript, which is used for data persistence.
+Rewriting in TypeScript, with [Svelte][svelte] for the UI, offered several benefits: it made UI development easier, better integration with FrontEnd web technologies, and made adding new features simpler. However, one key challenge I faced was handling JSON serialization and deserialization in TypeScript, which is used for data persistence.
 
 MonoSketch saves drawings as a custom format `.mono` file, which is essentially a JSON file with a custom structure:
 - Field names are obfuscated for shorter file sizes (e.g., `text` is serialized as `t`).
-- Some value types are serialized in a custom format (e.g., a `Point(left, right)` object is serialized as a single string in the format `{left}|{right}`).
+- Some value types are serialized in a custom format (e.g., a `Point(left, right)` object is serialized as a single string in the format `"{left}|{right}"`).
 
-These customizations were straightforward to implement in Kotlin, thanks to [**Kotlin’s serialization library**][kotlin-serialization]. However, TypeScript lacks a built-in mechanism for customizing JSON field names and serialization rules. Although there is a library called [class-transformer][class-transformer] that offers similar features to Kotlin's serialization, I found it too complex for MonoSketch and was reluctant to learn it. This led me to develop a custom solution for JSON serialization and deserialization in TypeScript, which I’ll share in this post.
-
+These customizations were straightforward to implement in Kotlin, thanks to [**Kotlin’s serialization library**][kotlin-serialization]. However, TypeScript lacks a built-in mechanism for customizing JSON field names and serialization rules. Although there is a library called [class-transformer][class-transformer] that offers similar features to Kotlin's serialization, I found it too complex for MonoSketch and was lazy to learn it. This led me to develop a custom solution for JSON serialization and deserialization in TypeScript, which I’ll share in this post.
 
 #### Key Requirements
 First, let’s dive into the requirements that shaped the design of the solution.
@@ -45,7 +44,7 @@ Let's address each requirement in detail.
 
 This requirement is simple: we need to map the field names in the TypeScript class to the field names in the JSON file. For example, the extra value of a text shape looks like this:
 ```typescript
-const extra = {
+extra = {
   textHorizontalAlign: 0,
   textVerticalAlign: 0,
   // ...
@@ -84,11 +83,10 @@ class TextShapeExtra {
 
 This solution is simple and straightforward, but it has a few drawbacks:
 
-{:.box-danger}
-> - It requires manual mapping of each field, which can be tedious for classes with many fields.
-> - It is error-prone, as a typo in the field name can lead to runtime errors.
-> - It is not scalable, as adding or removing fields requires updating the `toJson()` and `fromJson()` methods.
-> - It is not reusable, as the mapping logic is tightly coupled with the class implementation.
+- It requires manual mapping of each field, which can be tedious for classes with many fields.
+- It is error-prone, as a typo in the field name can lead to runtime errors.
+- It is not scalable, as adding or removing fields requires updating the `toJson()` and `fromJson()` methods.
+- It is not reusable, as the mapping logic is tightly coupled with the class implementation.
 
 **Solution: Decorators**
 
