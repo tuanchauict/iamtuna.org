@@ -5,16 +5,16 @@ subtitle: "Some notes about text rendering of Android"
 author: "tuna"
 category: Android
 tags: android text-rendering
+excerpt: |
+  An in-depth exploration of text and font rendering techniques on Android, including font size scaling, fit font size algorithms, text drawing, and handling shadows.
 excerpt_separator: <!--more-->
 ---
-> *Some notes about text rendering of Android*
-
 <!--more-->
 
 ## Font size scaling
-Text rendering in Android does have scale ratio. For example, *font size = 1,000 is 5 times as big as font size 200*, and 10 times as big as font size 100. The abnormal situation we have seen when get width and height of text through `Paint.getTextBounds()` comes from the integer. There are 4 int properties of a Rect: `left, right, top, bottom`. `left` and `top` are initiated by `Math.floor` while right and bottom are initiated by Math.ceil. As the result, we lost information on small font size.
+Text rendering in Android does have a scale ratio. For example, *font size = 1,000 is 5 times as big as font size 200*, and 10 times as big as font size 100. The abnormal situation we have seen when getting the width and height of text through `Paint.getTextBounds()` comes from the integer properties of a Rect. There are 4 int properties of a Rect: `left`, `right`, `top`, and `bottom`. `left` and `top` are initialized by `Math.floor` while `right` and `bottom` are initialized by `Math.ceil`. As a result, we lose information on small font sizes.
 
-After doing stats with 622 fonts on my computer, I experience that only 12/622 fonts have the width value different more than 20 pixels (the highest is 27 pixels) on scaling `textWidth * 5` of font size `1,000,000` to `Paint.getTextBounds()` of font size `5,000,000`.
+After analyzing 622 fonts on my computer, I found that only 12 out of 622 fonts have a width difference of more than 20 pixels (the highest being 27 pixels) when scaling `textWidth * 5` from a font size of `1,000,000` to `Paint.getTextBounds()` with a font size of `5,000,000`.
 
 ```
                CREATURE.TTF
@@ -31,8 +31,7 @@ After doing stats with 622 fonts on my computer, I experience that only 12/622 f
 ```
 
 ## Fit Font Size Finding Algorithm
-
-The algorithm is created based on the big font size. Currently, I set font size 1,000,000 pixels.
+The algorithm is designed to work with a large base font size. In this example, the base font size is set to 1,000,000 pixels. This large size helps to minimize the impact of rounding errors when calculating the text bounds using `Paint.getTextBounds()`. By scaling down from this large size, we can achieve more accurate results for the desired font size that fits within the specified bounds.
 
 ```java
 float getFitFontSize(
@@ -53,7 +52,7 @@ float getFitFontSize(
 ```
 
 ## Text Drawing
-Text is drawn at the baseline which is equal to the `-textBoundsRect.top` (top is always negative). Besides, we should take care of the `textBoundsRect.left` because the width of text is calculated by `right — left`, and with some font and font size, `left` may not be equal to `zero`.
+Text is drawn at the baseline, which is equal to `-textBoundsRect.top` (since `top` is always negative). Additionally, we should consider `textBoundsRect.left` because the width of the text is calculated by `right - left`, and for some fonts and font sizes, `left` may not be equal to zero.
 
 So, the drawing text should be:
 
@@ -69,7 +68,7 @@ canvas.drawText(
 ```java
 paint.setShadowLayer(blur, offsetX, offsetY, color);
 ```
-When shadow is turned on, we need to change a little bit about the finding font size algorithm and drawing.
+When shadow is turned on, we need to adjust the font size finding algorithm and the drawing method slightly.
 
 The new algorithm should be:
 
@@ -107,5 +106,5 @@ canvas.drawText(
 );
 ```
 
-The above code is not correct in case of `blur > 1`.
+**Note:** The above code is not correct in case of `blur > 1`.
 
