@@ -97,6 +97,11 @@
       background: rgb(255, 248, 225);
     }
 
+    &.box-danger {
+      border-left-color: rgb(255, 102, 102);
+      background: rgb(255, 242, 242);
+    }
+
     &.box-italic {
       font-style: italic;
     }

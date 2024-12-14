@@ -84,7 +84,7 @@ class TextShapeExtra {
 
 This solution is simple and straightforward, but it has a few drawbacks:
 
-{:.box-warning}
+{:.box-danger}
 > - It requires manual mapping of each field, which can be tedious for classes with many fields.
 > - It is error-prone, as a typo in the field name can lead to runtime errors.
 > - It is not scalable, as adding or removing fields requires updating the `toJson()` and `fromJson()` methods.
@@ -103,7 +103,7 @@ class TextShapeExtra {
   textVerticalAlign: number = 0;
 }
 ```
-`SerialName` is defined as follows:
+`@SerialName` decorator is defined as follows:
 ```typescript
 function SerialName(name: string) {
   return function(target: any, propertyKey: string | symbol) {
