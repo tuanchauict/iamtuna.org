@@ -34,7 +34,7 @@ First, let’s dive into the requirements that shaped the design of the solution
 When designing a solution for MonoSketch, I identified three primary requirements that the system needed to fulfill:
 
 1. Custom Field Names
-2. Custom Serialization and Deserialization of Values**
+2. Custom Serialization and Deserialization of Values
 3. Support for Nested Objects
 
 
@@ -59,7 +59,7 @@ will be serialized as:
 }
 ```
 
-A simple solution is we will write a method like this:
+A simple solution is we will add 2 methods like these:
 ```typescript
 class TextShapeExtra {
   textHorizontalAlign: number = 0;
@@ -126,7 +126,7 @@ With this decorator, we can now serialize and deserialize objects with custom fi
 
 ## Custom Serialization and Deserialization of Values
 
-The second requirement is to support custom serialization and deserialization of values. In the `Point` sample above, we need to serialize a `Point` object as a string in the format `{left}|{right}`. This is a common requirement in many serialization libraries, but TypeScript does not provide built-in support for this feature.
+The second requirement is to support custom serialization and deserialization of values. In the `Point` sample above, we need to serialize a `Point(left, right)` object as a string in the format `"{left}|{right}"`. This is a common requirement in many serialization libraries, but TypeScript does not provide built-in support for this feature.
 
 Let's expand the `TextShapeExtra` class to include a `Point` object:
 
@@ -292,7 +292,7 @@ function Jsonizable(constructor: Function) {
 }
 ```
 
-This decorator adds a `toJson` and `fromJson` method to the class and class's static api respectively, which recursively serializes and deserializes the object and its nested objects. 
+This decorator adds `toJson` and `fromJson` methods to the class and class's static api respectively, which recursively serializes and deserializes the object and its nested objects. 
 
 - `toJson` method iterates over each field in the object, checks if the field has a custom serializer, and applies the serialization logic accordingly. If the field is an object, it recursively calls the `toJson` method of the nested object. 
 - `fromJson` method does the reverse, iterating over each field in the JSON data, checking if the field has a custom deserializer, and applying the deserialization logic accordingly. If the field is an object, it recursively calls the `fromJson` method of the nested object.
