@@ -5,7 +5,7 @@ author: "Tuna"
 comments: false
 category: Coding
 tags: testing
-image: 
+image: https://rare-gallery.com/thumbnail/72620-Tom-HanksForrest-Gump-HD-Wallpaper.jpg
 excerpt: |
   Test code giống như hộp sô-cô-la, bạn sẽ không bao giờ biết mình sẽ nhận được gì… cho đến khi nó bị lỗi!
 excerpt_separator: <!--more-->
@@ -49,7 +49,7 @@ fun testCalculate() {
 
 Theo bạn thì có vấn đề gì với đoạn test code không?
 
-<img src="/images/2024/12/thinking-meme.png" width=300 style="padding: 1.5rem">
+<img src="/images/2024/12/thinking-meme.png" width=240 style="padding: 1.5rem">
 
 **Vấn đề nằm ở đâu?**
 
