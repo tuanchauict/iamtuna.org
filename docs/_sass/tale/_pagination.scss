@@ -19,11 +19,29 @@
 
   .arrow {
     color: $default-color;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 
     &:hover,
     &:focus {
       opacity: .6;
       text-decoration: none;
+    }
+
+    .pagin-title {
+      display: none;
+
+      @media (min-width: $pc-width) {
+        display: block;
+      }
+
+      font-size: 0.7rem;
+      font-family: $monospaced;
+      max-width: 9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
