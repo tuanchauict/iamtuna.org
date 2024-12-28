@@ -15,9 +15,9 @@ hidden: false
 draft: false
 ---
 
-Most developers are familiar with writing code that runs right away - you call a function and it does something immediately. But sometimes, we need a more flexible way to handle actions in our programs. This is where the Command pattern comes in. 
+Most of us are familiar with writing code that runs right away - call a function and get the result  immediately. However, sometimes, we need a more flexible way to handle actions and enforce some use-cases around the action, this is where the Command pattern comes in.
 
-While it's one of the most widely used design patterns in software, many developers overlook it because it works differently than what they're used to. Instead of the usual direct approach of "do this now," the Command pattern introduces a way to package actions into objects that can be used later, modified, or even undone.
+While this pattern is one of the most widely used design patterns in software, we usually overlook it because it works differently than what they’re used to. Instead of the usual direct approach of “do this now,” the Command pattern introduces a way to package actions into objects that can be used later, modified, or even undone.
 
 
 ## What is the Command pattern?
