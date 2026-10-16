@@ -1,0 +1,41 @@
+---
+layout: default
+title: "my apps"
+permalink: /apps/
+---
+{% include page_header.html %}
+
+<div class="catalogue">
+  <p class="apps-intro">
+    I build small apps in my free time, mostly to solve my own needs, and I hope some of them
+    can be useful to you too. Lately, with the help of AI, I've been able to make a few more
+    and fix a few more of my everyday annoyances. Feel free to give them a try.
+  </p>
+
+  {% for app in site.data.apps %}
+  {% assign icon_file = site.static_files | where: "path", app.icon | first %}
+  <a href="{{ app.url }}" class="catalogue-item" target="_blank" rel="noopener">
+    <div class="apps-item">
+      <div class="apps-icon">
+        {% if icon_file and app.icon_tile %}
+        <div class="apps-icon-tile"><img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon"></div>
+        {% elsif icon_file %}
+        <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon">
+        {% else %}
+        <div class="apps-icon-tile" aria-hidden="true">{{ app.name | slice: 0 }}</div>
+        {% endif %}
+      </div>
+      <div class="catalogue-item-container">
+        <h1 class="catalogue-title">{{ app.name }} <span class="catalogue-external">&#8599;</span></h1>
+        <div class="catalogue-item-meta">
+          <span class="catalogue-item-category">{{ app.platform }} • {{ app.url | remove: "https://" | remove: "/" }}</span>
+        </div>
+        <div class="catalogue-item-content">
+          <p>{{ app.description }}</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="catalogue-divider"></div>
+  {% endfor %}
+</div>

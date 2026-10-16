@@ -1,0 +1,62 @@
+.apps-intro {
+  width: 100%;
+  max-width: $standard-content-width;
+  padding: 0 $content-horizontalPadding;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.apps-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .catalogue-item-container {
+    flex: 1;
+  }
+}
+
+// Sized like a macOS app icon: the visible tile is ~80% of the box,
+// so bare glyphs get a tile with the same inset and corner radius.
+.apps-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  margin-top: 0.3rem;
+
+  // Base styles give every img a bottom margin, which throws off centering.
+  img {
+    margin: 0;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.apps-icon-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 6px;
+  border: 1px solid $grey-2;
+  border-radius: 12px;
+  background: $white;
+  color: $grey-1;
+  font-family: $serif-primary;
+  font-size: 1.6rem;
+
+  & > img {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.catalogue-external {
+  color: $default-tint;
+  font-size: 1rem;
+}

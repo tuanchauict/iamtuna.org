@@ -1,0 +1,22 @@
+# Apps listed on /apps/. Add a new entry to show it on the page.
+# icon: path to a square image (at least 128x128), drawn like a macOS app icon.
+# icon_tile: true when the icon is a bare glyph that needs a tile drawn behind it.
+# If the icon file is missing, the page shows the app's first letter on a tile.
+- name: MonoSketch
+  url: https://monosketch.io/
+  platform: web
+  icon: /images/apps/monosketch.png
+  icon_tile: true
+  description: A small tool for drawing diagrams with plain ASCII characters, just boxes, lines and text. Handy for sketches you want to keep in a code comment, a README or a doc.
+
+- name: Redline
+  url: https://redline.iamtuna.org
+  platform: macOS
+  icon: /images/apps/redline.png
+  description: A simple markdown reader that remembers earlier versions of your files, so you can see what changed, word by word, without needing git.
+
+- name: Bento
+  url: https://bento.iamtuna.org
+  platform: macOS
+  icon: /images/apps/bento.png
+  description: Save how your windows are arranged for a task, then bring that layout back with one shortcut. A little helper for switching between tasks.
